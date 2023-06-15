@@ -1,5 +1,10 @@
 <template>
-  <div  class=" text-red-500">
-   sfsdf
-  </div>
+<NuxtLayout :name="layout">
+  <NuxtPage />
+</NuxtLayout >
 </template>
+
+
+<script setup>
+ const layout = ref('main')
+</script>
