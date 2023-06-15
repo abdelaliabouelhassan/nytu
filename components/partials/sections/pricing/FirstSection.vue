@@ -2,9 +2,9 @@
     <div class=" main-container pt-20 pb-28 space-y-40">
         <div class=" w-full flex flex-col items-start space-y-4">
             <div class=" flex items-center space-x-2">
-                <Star class=" w-[2rem] h-[34px]" />
+                <Star class=" w-[2rem] h-[2.125rem]" />
                 <span class=" text-5xl font-bold text-tertiary">Pricing</span>
-                <Star class=" w-[2rem] h-[34px]" />
+                <Star class=" w-[2rem] h-[2.125rem]" />
             </div>
             <p class=" text-[5rem] text-tertiary font-light leading-[5rem]">
                 Entdecken Sie unsere Pakete
