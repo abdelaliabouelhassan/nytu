@@ -1,7 +1,7 @@
 <template>
-    <div class=" w-full bg-primary py-20">
+    <section class=" w-full bg-primary py-28">
        <Pricing />
-    </div>
+    </section>
 </template>
 
 

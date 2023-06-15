@@ -1,5 +1,5 @@
 <template>
-    <div class=" main-container pt-20 pb-28 space-y-40">
+    <section class=" main-container pt-20 pb-28 space-y-40">
         <div class=" w-full flex flex-col items-start space-y-4">
             <div class=" flex items-center space-x-2">
                 <Star class=" w-[2rem] h-[2.125rem]" />
@@ -17,7 +17,7 @@
                 </p>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 
