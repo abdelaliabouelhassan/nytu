@@ -1,5 +1,5 @@
 <template>
-    <div class=" w-full h-[4rem] z-40 bg-white border-b border-[#D9D9D9] flex justify-between fixed ">
+    <header class=" w-full h-[4rem] z-40 bg-white border-b border-[#D9D9D9] flex justify-between fixed ">
        <div class=" flex items-center space-x-10 w-full h-full">
         <NuxtLink to="/"  class=" duration-500  max-w-[10rem] hover:bg-primary w-full h-full flex text-primary hover:text-white border-r border-[#D9D9D9]">
              <Logo class=" m-auto"/>
@@ -21,7 +21,7 @@
         </NuxtLink>
        </div>
       
-    </div>
+    </header>
 </template>
 
 

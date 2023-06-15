@@ -24,12 +24,15 @@
 
              <!-- END Contnet -->
         </div>
+        <!-- End Body -->
+        <Footer />
     </div>
 </template>
 
 
 <script setup>
     import Header from "@/components/partials/Header.vue"
+    import Footer from "@/components/partials/Footer.vue"
     import Edit from "@/components/UI/Icons/Edit.vue"
     import PhoneM from "@/assets/icons/PhoneM.png"
 </script>
