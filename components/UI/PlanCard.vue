@@ -2,9 +2,9 @@
     <div class=" w-full bg-white hover:bg-tertiary group  p-10 space-y-6 duration-300">
         <div class=" w-full flex flex-col items-start space-y-4 border-b border-[#D9D9D9] pb-5">
              <div class=" flex items-center space-x-2">
-                <Star class=" w-[1.375rem] h-[1.375rem]" />
+                <Star class=" w-[1.375rem] h-[1.375rem] text-primary" />
                 <span class=" text-3xl font-bold text-tertiary group-hover:text-white">{{ plan.name }}</span>
-                <Star class=" w-[1.375rem] h-[1.375rem]" />
+                <Star class=" w-[1.375rem] h-[1.375rem] text-primary" />
             </div>
             <div class=" w-full flex flex-col items-start space-y-1">
                 <span class=" text-black text-xl font-normal group-hover:text-white">{{ plan.description }}</span>
