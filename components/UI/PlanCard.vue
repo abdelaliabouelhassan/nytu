@@ -21,7 +21,7 @@
             </div>
         </div>
         <NuxtLink :to="'/references-details/' + plan.id" class=" w-full h-[16.125rem] relative">
-            <DateTicket  :datetext="plan.eventDate" class=" absolute top-0 right-0"/>
+            <DateTicket  :datetext="plan.eventDate" class=" absolute top-0 right-0 text-sm"/>
             <div class=" flex flex-col items-start space-y-2 absolute left-5 bottom-6">
                 <h1 class=" text-white font-bold text-[1.375rem]">{{ plan.eventTitle }}</h1>
                <div class=" flex items-center space-x-1 text-primary">
