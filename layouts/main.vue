@@ -20,7 +20,7 @@
                 </div>
              </div>
              <!-- Contnet -->
-             <div class=" w-full h-full px-4 lg:px-0">
+             <div class=" w-full h-full">
                 <slot />
              </div>
 
