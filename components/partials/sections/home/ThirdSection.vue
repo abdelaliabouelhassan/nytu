@@ -1,5 +1,6 @@
 <template>
-    <section class=" bg-tertiary py-[5.625rem] mb-20 text-white overflow-hidden">
+    <!-- home third section -->
+    <section class="bg-tertiary py-[5.625rem] text-white overflow-hidden">
         <BaseCarousel class="">
             <div class="main-container relative overflow-visible">
                 <div class=" flex items-center space-x-2 text-primary">
@@ -15,7 +16,7 @@
                     <RightArrow/>
                 </div>
             </div>
-            <div class="carousel-container py-24 flex  " >
+            <div class="carousel-container py-24 flex" >
                 <div class="carousel main-container flex z-10 relative" ref="carousel">
                     <!-- carousel-item 1 -->
                     <div class="z-10 shrink-0 flex flex-col gap-y-[5.625rem] w-[60rem] mr-[10.25rem]">

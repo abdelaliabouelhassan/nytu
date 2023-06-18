@@ -66,12 +66,10 @@ function moveLeft() {
 
 
 function setScrollLimit() {
-    scrollLimit.value =   carousel.value.scrollWidth - carousel.value.offsetWidth
+    scrollLimit.value =   carouselContainer.value.scrollWidth - carouselContainer.value.offsetWidth
 }
 
 function highlightArrows(){
-    console.log('carouselContainer.value.scrollLeft',carouselContainer.value.scrollLeft)
-    console.log('scrollLimit.value',scrollLimit.value)
 
     if(carouselContainer.value.scrollLeft === 0){
         rightArrow.value.classList.remove('highlight')
@@ -130,23 +128,14 @@ onUnmounted(() => {
         overflow-y:visible;
         overflow-x:auto;
         user-select: none;
+        scrollbar-width: thin; /* For Firefox */
+        -ms-overflow-style: none; /* For Internet Explorer and Microsoft Edge */  
     }
     .carousel-parent :deep(.carousel){
         overflow:visible;
     }
     .carousel-parent :deep(.carousel-container)::-webkit-scrollbar {
-        width: 0; 
+        display: none;
     }
 
-    .carousel-parent :deep(.carousel-container)::-webkit-scrollbar-track {
-    background: transparent;
-    }
-
-    .carousel-parent :deep(.carousel-container)::-webkit-scrollbar-thumb {
-        background: transparent;
-    }
-
-    .carousel-parent :deep(.carousel-container)::-webkit-scrollbar-thumb:hover {
-        background: transparent;
-    }
 </style>
