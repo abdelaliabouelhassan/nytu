@@ -38,7 +38,7 @@
                                     </svg>
                                 </div>
                                 <div class="hidden group-hover:flex bg-primary w-full h-full items-center justify-center">
-                                    <Play class="w-[5.375rem] h-[5.375rem]"/>
+                                    <Play @click="openVideo('/images/home/multichannel_marketing.svg')" class="w-[5.375rem] h-[5.375rem]"/>
                                 </div>
                             </div>
                             <!-- feature content -->
@@ -54,7 +54,7 @@
                             <div class="w-[10.625rem] h-[10.625rem] rounded-full  overflow-hidden relative">
                                 <img class="w-full h-full object-contain" src="/images/home/multichannel_marketing.svg" alt="multichannel_marketing">
                                 <div class="hidden group-hover:flex bg-black/40 w-full h-full items-center justify-center absolute top-0 left-0">
-                                    <Play class="w-[5.375rem] h-[5.375rem]"/>
+                                    <Play @click="openVideo('/images/home/multichannel_marketing.svg')" class="w-[5.375rem] h-[5.375rem]"/>
                                 </div>
                             </div>
                             <!-- feature content -->
@@ -88,7 +88,7 @@
                                 <!-- play -->
                                 <div class="hidden group-hover:block w-[10.625rem] h-[10.625rem] rounded-full  group overflow-hidden absolute -top-[5.3125rem] -right-[5.3125rem]">
                                     <div class="bg-primary w-full h-full flex items-center justify-center">
-                                        <Play class="w-[5.375rem] h-[5.375rem]"/>
+                                        <Play @click="openVideo('/images/home/multichannel_marketing.svg')" class="w-[5.375rem] h-[5.375rem]"/>
                                     </div>
                                 </div>
 
@@ -113,7 +113,7 @@
                             <div class="w-[10.625rem] h-[10.625rem] rounded-full  overflow-hidden relative">
                                 <img class="w-full h-full object-contain" src="/images/home/maximal_flexibility.svg" alt="maximal_flexibility">
                                 <div class="hidden group-hover:flex bg-black/40 w-full h-full items-center justify-center absolute top-0 left-0">
-                                    <Play class="w-[5.375rem] h-[5.375rem]"/>
+                                    <Play @click="openVideo('/images/home/multichannel_marketing.svg')" class="w-[5.375rem] h-[5.375rem]"/>
                                 </div>
                             </div>
                             <!-- feature content -->
@@ -143,7 +143,7 @@
 
                                 </div>
                                 <div class="hidden group-hover:flex bg-primary w-full h-full items-center justify-center">
-                                    <Play class="w-[5.375rem] h-[5.375rem]"/>
+                                    <Play @click="openVideo('/images/home/multichannel_marketing.svg')" class="w-[5.375rem] h-[5.375rem]"/>
                                 </div>
                             </div>
                             <!-- feature content -->
@@ -177,7 +177,7 @@
                                     </svg>
                                 </div>
                                 <div class="z-20 hidden group-hover:flex bg-primary w-full h-full items-center justify-center rounded-full">
-                                    <Play class="w-[5.375rem] h-[5.375rem]"/>
+                                    <Play @click="openVideo('/images/home/multichannel_marketing.svg')" class="w-[5.375rem] h-[5.375rem]"/>
                                 </div>
                                 <div class="h-[23.75rem] w-[29.5625rem] absolute bottom-1/2 right-1/2 z-10">
                                     <img class="h-full object-contain pointer-events-none" src="/images/home/multichannel_marketing_2.svg" alt="multichannel_marketing_2" srcset="">
@@ -199,7 +199,7 @@
                             <div class="w-[10.625rem] h-[10.625rem] rounded-full  overflow-hidden relative">
                                 <img class="w-full h-full object-contain " src="/images/home/zahlungsplattform.svg" alt="zahlungsplattform">
                                 <div class="hidden group-hover:flex bg-black/40 w-full h-full items-center justify-center absolute top-0 left-0">
-                                    <Play class="w-[5.375rem] h-[5.375rem]"/>
+                                    <Play @click="openVideo('/images/home/multichannel_marketing.svg')" class="w-[5.375rem] h-[5.375rem]"/>
                                 </div>
                             </div>
                             <!-- feature content -->
@@ -215,7 +215,7 @@
                             <div class="w-[10.625rem] h-[10.625rem] rounded-full  overflow-hidden relative">
                                 <img class="w-full h-full object-contain" src="/images/home/crm_in_and_out.svg" alt="crm_in_and_out">
                                 <div class="hidden group-hover:flex bg-black/40 w-full h-full items-center justify-center absolute top-0 left-0">
-                                    <Play class="w-[5.375rem] h-[5.375rem]"/>
+                                    <Play  @click="showVideo = true" class="w-[5.375rem] h-[5.375rem]"/>
                                 </div>
                             </div>
                             <!-- feature content -->
@@ -238,10 +238,14 @@
             </div>
 
         </BaseCarousel>
+
+        <VideoModal :show="showVideo" @close="showVideo = false" :src="videoSrc"/>
     </section>
 </template>
 
 <script setup>
+import VideoModal from '@/components/UI/VideoModal.vue'
+
 import BaseCarousel from '@/components/UI/BaseCarousel.vue'
 import RightArrow from '@/components/UI/RightArrow.vue'
 import LeftArrow from '@/components/UI/LeftArrow.vue'
@@ -251,9 +255,18 @@ import Play from "@/components/UI/Icons/Play.vue"
 const last_carousel_item = ref(null)
 const carousel = ref(null)
 
+const showVideo = ref(false)
+const videoSrc = ref(null)
+
+function openVideo(src) {
+    showVideo.value = true
+    videoSrc.value = src
+}
+
 function setLastCarouselItemPadding() {
     last_carousel_item.value.style.paddingRight = window.getComputedStyle(carousel.value).getPropertyValue('margin-right')
 }
+
 onMounted(() => {
         setLastCarouselItemPadding()
         window.addEventListener('resize',setLastCarouselItemPadding)

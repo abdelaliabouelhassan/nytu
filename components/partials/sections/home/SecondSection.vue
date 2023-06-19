@@ -4,7 +4,7 @@
         <div class="main-container text-center flex flex-col gap-y-11">
             <h1 class="text-primary font-bold text-[5rem] ">Events made easy</h1>
             <p class="text-xl">Schnell, intuitiv und persönlich: Mit nytu gelingt erfolgreiches Event-Management im Handumdrehen. Unsere Plattform bietet Ihnen alle Funktionen, um Ihren Event mühelos zu organisieren und mit Ihren Zielgruppen einfach zu kommunizieren: der Versand von Einladungen, der Verkauf von Tickets und das Scanning-System beim Einlass finden Sie alles bequem an einem Ort. </p>
-            <Video>
+            <Video @click="showVideo = true">
                 <img class="w-full object-contain" src="/images/home/second_section_video.svg" alt="second_section_video">
             </Video>
         </div>
@@ -73,14 +73,17 @@
                 <RightArrow class="right-arrow "/>
             </div>
         </BaseCarousel>
-
+        <VideoModal :show="showVideo" @close="showVideo = false" src="/images/home/second_section_video.svg"/>
     </section>
 </template>
 
 <script setup>
 import Video from '@/components/UI/Video.vue'
+import VideoModal from '@/components/UI/VideoModal.vue'
 import BaseCarousel from '@/components/UI/BaseCarousel.vue'
 import RightArrow from '@/components/UI/RightArrow.vue'
 import LeftArrow from '@/components/UI/LeftArrow.vue'
 import Star from "@/components/UI/Icons/Star.vue"
+
+const showVideo = ref(false)
 </script>

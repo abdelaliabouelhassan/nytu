@@ -3,7 +3,7 @@
         <div class=" w-full flex flex-col items-start space-y-10">
                 <h1 class=" text-[5rem] text-tertiary font-normal">The Zurich OpenAir</h1>
                 <div class=" w-full">
-                    <Video>
+                    <Video @click="showVideo = true">
                         <img src="/images/events.svg" alt="">
                         <DateTicket datetext="Oktober 2022" class=" absolute top-0 right-4 w-[8.593rem] h-[8.818rem] text-2xl" />
                     </Video>
@@ -43,10 +43,15 @@
                     </div>
                 </div>
         </div>
+        <VideoModal :show="showVideo" @close="showVideo = false" :src="videoSrc"/>
     </section>
 </template>
 
 <script setup>
+import VideoModal from '@/components/UI/VideoModal.vue'
+
  import Video from "@/components/UI/Video.vue"
  import DateTicket from "@/components/UI/DateTicket.vue"
+ const videoSrc = ref('/images/home/multichannel_marketing.svg')
+ const showVideo = ref(false)
 </script>
