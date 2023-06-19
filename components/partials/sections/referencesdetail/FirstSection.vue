@@ -1,5 +1,5 @@
 <template>
-    <section class=" w-full main-container py-20">
+    <section class=" w-full main-container pt-20">
         <div class=" w-full flex flex-col items-start space-y-10">
                 <h1 class=" text-[5rem] text-tertiary font-normal">The Zurich OpenAir</h1>
                 <div class=" w-full">

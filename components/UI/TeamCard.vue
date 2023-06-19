@@ -1,5 +1,5 @@
 <template>
-    <div class=" w-full flex flex-col items-start space-y-3 ">
+    <div class="flex flex-col items-start space-y-3 ">
         <div class=" w-full max-h-[25.813rem]  h-full  cursor-pointer ">
             <img draggable="false" :src="person.image" class=" w-full h-full object-cover  hover:hue-rotate-[60deg] duration-500" alt="">
         </div>
