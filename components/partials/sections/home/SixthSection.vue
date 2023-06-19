@@ -33,7 +33,7 @@ import RightArrow from '@/components/UI/RightArrow.vue'
 import LeftArrow from '@/components/UI/LeftArrow.vue'
 import BaseCarousel from '@/components/UI/BaseCarousel.vue'
 
- const testimonials = ref([
+const testimonials = ref([
     {
         id:1,
         image:'/images/person4.svg',
@@ -65,5 +65,8 @@ import BaseCarousel from '@/components/UI/BaseCarousel.vue'
         
     },
     
- ])
+])
+
+
+
 </script>

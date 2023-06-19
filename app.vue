@@ -6,5 +6,8 @@
 
 
 <script setup>
- const layout = ref('main')
+import 'vue3-lottie/dist/style.css'
+
+const layout = ref('main')
+
 </script>
