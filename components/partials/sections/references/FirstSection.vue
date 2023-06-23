@@ -1,7 +1,7 @@
 <template>
     <section class=" main-container pt-20 pb-28 space-y-40">
         <div class=" w-full flex flex-col items-start space-y-4">
-            <div class=" flex items-center space-x-2">
+            <div class=" flex items-center space-x-2 text-primary">
                 <Star class=" w-[2rem] h-[2.125rem]" />
                 <span class=" text-5xl font-bold text-tertiary">Referenzen</span>
                 <Star class=" w-[2rem] h-[2.125rem]" />

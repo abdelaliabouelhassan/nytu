@@ -14,15 +14,15 @@
     transition: height 0.3s ease;
   }
   
-  .accordion .accordion-item .accordion-header{
-    cursor: pointer;
-  }
-  
-  .accordion .accordion-item.active .accordion-content {
-    height: auto;
-    transition: height 0.3s ease;
-  }
-  
-  .accordion .chevron {
-    transition: all 0.2s ease;
-  }
+.accordion .accordion-item .accordion-header{
+  cursor: pointer;
+}
+
+.accordion .accordion-item.active .accordion-content {
+  height: auto;
+  transition: height 0.3s ease;
+}
+
+.accordion .chevron {
+  transition: all 0.2s ease;
+}

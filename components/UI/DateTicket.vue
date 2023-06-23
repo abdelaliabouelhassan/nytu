@@ -1,6 +1,6 @@
 <template>
-    <div class=" bg-primary w-[4.811rem] h-[4.938rem] flex">
-        <div class=" m-auto font-bold text-sm text-white text-center">{{ datetext }}</div>
+    <div class=" bg-primary w-[4.811rem] h-[4.938rem]  flex">
+        <div class=" m-auto font-bold  text-white text-center">{{ datetext }}</div>
     </div>
 </template>
 
