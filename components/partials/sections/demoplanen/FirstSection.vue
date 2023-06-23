@@ -1,6 +1,6 @@
 <template>
-    <section class=" w-full bg-[#85F26C] py-[17.3rem]">
-        <ContactForm />
+    <section class=" w-full bg-[#85F26C] py-20 md:h-screen  flex ">
+        <ContactForm class=" m-auto" />
     </section>
 </template>
 
