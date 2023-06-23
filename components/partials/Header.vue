@@ -10,7 +10,7 @@
             </NuxtLink >
         </div>
        </div>
-      <div class=" flex items-center space-x-4 md:space-x-0">
+      <div class=" flex items-center space-x-4 md:space-x-0 ">
         <div class=" max-w-[10rem] w-full h-full">
             <NuxtLink  to="/demo-planen" class=" md:bg-secondary px-0 md:px-4 w-full h-full flex md:border-l md:border-[#D9D9D9] group">
             <div :class="{'text-primary':!open,' text-white':open}" class="  flex items-center m-auto space-x-2 md:group-hover:text-white  md:text-[#1C0544] duration-300 ">
@@ -26,7 +26,7 @@
             <X class=" m-auto" v-else/>
         </button>
       </div>
-        <div class="flex items-center lg:order-2">
+        <div class="flex items-center lg:order-2 md:hidden">
                 <aside id="default-sidebar" :class="{'translate-x-0':open,'-translate-x-full rtl:translate-x-full':!open}" class="fixed py-4 bg-primary top-16 left-0 rtl:right-0 z-40 w-full h-screen transition-transform  " aria-label="Sidebar">
                     <div class="h-full  overflow-y-auto px-4  space-y-8    ">
                          <div class="  items-start flex-col space-y-4 lg:space-x-5  flex ">
