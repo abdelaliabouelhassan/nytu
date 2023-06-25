@@ -1,6 +1,6 @@
 <template>
     <section class=" w-full main-container  pt-10 pb-28">
-        <div class=" w-full grid grid-cols-3 gap-x-8 gap-y-20">
+        <div class=" w-full grid-cols-2 grid md:grid-cols-3 gap-x-8 gap-y-20">
             <TeamCard v-for="(person,index) in team" :key="index" :person="person" />
             <TeamCard v-for="(person,index) in team" :key="index" :person="person" />
             <TeamCard v-for="(person,index) in team" :key="index" :person="person" />
