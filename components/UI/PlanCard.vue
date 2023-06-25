@@ -1,17 +1,17 @@
 <template>
-    <div class=" w-full bg-white hover:bg-tertiary group  p-10 space-y-6 duration-300">
+    <div class=" w-full bg-white hover:bg-tertiary group p-5  md:p-10 space-y-6 duration-300">
         <div class=" w-full flex flex-col items-start space-y-4 border-b border-[#D9D9D9] pb-5">
              <div class=" flex items-center space-x-2">
-                <Star class=" w-[1.375rem] h-[1.375rem] text-primary" />
-                <span class=" text-3xl font-bold text-tertiary group-hover:text-white">{{ plan.name }}</span>
+                <Star class=" w-[0.95806rem] h-[0.95806rem] md:w-[1.375rem] md:h-[1.375rem] text-primary" />
+                <span class=" text-xl md:text-3xl font-bold text-tertiary group-hover:text-white">{{ plan.name }}</span>
                 <Star class=" w-[1.375rem] h-[1.375rem] text-primary" />
             </div>
             <div class=" w-full flex flex-col items-start space-y-1">
-                <span class=" text-black text-xl font-normal group-hover:text-white">{{ plan.description }}</span>
-                <span class=" text-primary font-bold text-xl">{{ plan.price }}</span>
+                <span class=" text-black text-base md:text-xl font-normal group-hover:text-white">{{ plan.description }}</span>
+                <span class=" text-primary font-bold text-base md:text-xl">{{ plan.price }}</span>
             </div>
         </div>
-        <div class=" flex flex-col items-start space-y-4 text-xl text-black group-hover:text-white font-normal pb-4">
+        <div class=" flex flex-col items-start space-y-4 text-base md:text-xl text-black group-hover:text-white font-normal pb-4">
             <div class=" flex items-center space-x-4" v-for=" (item,index ) in plan.features" :key="index">
                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="12.4282" cy="12.6206" r="12.1392" fill="#9099FF"/>
@@ -31,11 +31,11 @@
                 </svg>
                </div>
             </div>
-            <img :src="plan.eventImg" class=" w-full h-full object-cover" alt="">
+            <img :src="plan.eventImg" class=" w-full h-[16.125rem] object-cover" alt="">
         </NuxtLink>
 
         <NuxtLink to="" class=" w-full h-[3rem] flex border border-primary group-hover:bg-primary   ">
-            <span class=" text-primary group-hover:text-white font-bold text-xl text-center m-auto">Enterprise buchen</span>
+            <span class=" text-primary group-hover:text-white font-bold text-base md:text-xl text-center m-auto">Enterprise buchen</span>
         </NuxtLink>
     </div>
 </template>

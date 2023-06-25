@@ -1,12 +1,12 @@
 <template>
-    <section class="flex flex-col gap-y-16 ">
+    <section class="flex flex-col gap-y-10 md:gap-y-16 ">
         <div class="w-full main-container relative overflow-visible">
             <div class=" flex items-center space-x-2 ">
-                <Star class=" w-[2rem] h-[2.125rem] text-primary " />
-                <span class=" text-5xl font-bold">Testimonials</span>
-                <Star class=" w-[2rem] h-[2.125rem] text-primary" />
+                <Star class=" w-[0.8125rem] h-[0.8125rem] md:w-[2rem] md:h-[2.125rem] text-primary " />
+                <span class=" ext-xl md:text-5xl font-bold">Testimonials</span>
+                <Star class=" w-[0.8125rem] h-[0.8125rem] md:w-[2rem] md:h-[2.125rem] text-primary" />
             </div>
-            <p class=" text-[3.5rem]   leading-[5rem] max-w-3xl">
+            <p class=" text-xl md:text-[3.5rem]   leading-[5rem] max-w-3xl">
                 Was unsere Kunden sagen
             </p>
         </div>

@@ -3,17 +3,17 @@
         <div class=" main-container  space-y-20">
             <div class=" w-full flex flex-col items-start space-y-4">
                 <div class=" flex items-center space-x-2">
-                    <Star class=" w-[2rem] h-[2.125rem] text-white" />
-                    <span class=" text-5xl font-bold text-white">Registrieren</span>
-                    <Star class=" w-[2rem] h-[2.125rem] text-white" />
+                    <Star class=" w-[0.8125rem] h-[0.8125rem] md:w-[2rem] md:h-[2.125rem] text-white" />
+                    <span class=" text-xl md:text-5xl font-bold text-white">Registrieren</span>
+                    <Star class=" w-[0.8125rem] h-[0.8125rem] md:w-[2rem] md:h-[2.125rem] text-white" />
                 </div>
-                <p class=" text-[5rem] text-white font-light leading-[5rem]">
+                <p class=" text-3xl md:text-[5rem] text-white font-light md:leading-[5rem]">
                    Account erstellen & loslegen
                 </p>
             </div>
             <div class=" flex justify-end ">
-                <div class=" max-w-[31.875rem] w-full">
-                    <p class=" text-white font-normal text-xl">
+                <div class=" max-w-[18.5rem] md:max-w-[31.875rem] w-full">
+                    <p class=" text-white font-normal text-base md:text-xl">
                         Starten Sie mit unserem Essential-Paket ohne wiederkehrende Kosten.Sie können jederzeit ein Upgrade Ihres Abonnements vornehmen, um die Plattform noch besser zu nutzen.
                         <br> <br>
                         Sie erhalten nach Ihrer Registrierung Ihren persönlichen Zugang und haben die Möglichkeit, weitere Benutzer einzuladen.
@@ -22,22 +22,22 @@
             </div>
 
           <form action="" method="post" class=" space-y-4">
-            <input type="text" class=" w-full h-[3.25rem] border border-white bg-transparent text-white text-xl placeholder-white pl-8 outline-none pr-4" placeholder="Unternehmen" required>
+            <input type="text" class=" w-full h-[3.25rem] border border-white bg-transparent text-white text-base md:text-xl placeholder-white pl-4 md:pl-8 outline-none pr-4" placeholder="Unternehmen" required>
             <div class=" relative w-full">
-                  <input type="text" class=" w-full h-[3.25rem] border border-white bg-transparent text-white text-xl placeholder-white pl-8 outline-none pr-36" placeholder="Ihre persönliche Webadresse" required>
-                    <div  class=" absolute top-0 right-0 w-[8.438rem] h-[3.25rem] bg-white flex  text-center text-primary text-xl font-normal">
+                  <input type="text" class=" w-full  h-[3.25rem] border border-white bg-transparent text-white text-base md:text-xl placeholder-white pl-4 md:pl-8 outline-none pr-28 md:pr-36" placeholder="Ihre persönliche Webadresse" required>
+                    <div  class=" absolute top-0 right-0 w-[6rem] md:w-[8.438rem] h-[3.25rem] bg-white flex  text-center text-primary text-base md:text-xl font-normal">
                         <span class=" m-auto">.privent.ch</span>
                     </div>
             </div>
-            <div class=" w-full flex items-start justify-between">
-                <div class=" max-w-[29.813rem] w-full space-y-4">
-                    <input type="text" class=" w-full h-[3.25rem] border border-white bg-transparent text-white text-xl placeholder-white pl-8 outline-none pr-4" placeholder="Vorname" required>
-                    <input type="text" class=" w-full h-[3.25rem] border border-white bg-transparent text-white text-xl placeholder-white pl-8 outline-none pr-4" placeholder="Name" required>
-                    <input type="email" class=" w-full h-[3.25rem] border border-white bg-transparent text-white text-xl placeholder-white pl-8 outline-none pr-4" placeholder="Email" required>
-                    <input type="password" class=" w-full h-[3.25rem] border border-white bg-transparent text-white text-xl placeholder-white pl-8 outline-none pr-4" placeholder="Passwort" required>
+            <div class=" w-full flex md:flex-row flex-col space-y-4 md:space-x-4 md:space-y-0 items-start md:justify-between">
+                <div class=" md:max-w-[29.813rem] w-full space-y-4">
+                    <input type="text" class=" w-full h-[3.25rem] border border-white bg-transparent text-white text-base md:text-xl placeholder-white pl-4 md:pl-8 outline-none pr-4" placeholder="Vorname" required>
+                    <input type="text" class=" w-full h-[3.25rem] border border-white bg-transparent text-white text-base md:text-xl placeholder-white pl-4 md:pl-8 outline-none pr-4" placeholder="Name" required>
+                    <input type="email" class=" w-full h-[3.25rem] border border-white bg-transparent text-white text-base md:text-xl placeholder-white pl-4 md:pl-8 outline-none pr-4" placeholder="Email" required>
+                    <input type="password" class=" w-full h-[3.25rem] border border-white bg-transparent text-white text-base md:text-xl placeholder-white pl-4 md:pl-8 outline-none pr-4" placeholder="Passwort" required>
                 </div>
 
-                <div class=" flex flex-col items-end space-y-24 max-w-[22rem]">
+                <div class=" flex flex-col items-end space-y-8 md:space-y-24 md:max-w-[22rem]">
                     <div class=" flex items-start space-x-2">
                       <div class="control-group">
                         <label class="control control-checkbox">
@@ -48,7 +48,7 @@
                         <p class=" text-white text-xl font-normal">Ich akzeptiere die Allgemeinen Geschäftsbedingungen und bin mit dem Datenschutz einverstanden.</p>
                     </div>
                     
-                    <button type="submit" class=" text-center text-xl font-bold text-white bg-tertiary w-[19.938rem] h-[3rem]">Anfrage senden</button>
+                    <button type="submit" class=" w-full text-center text-base md:text-xl font-bold text-white bg-tertiary md:w-[19.938rem] h-[3rem]">Anfrage senden</button>
                     
                 </div>
                 
