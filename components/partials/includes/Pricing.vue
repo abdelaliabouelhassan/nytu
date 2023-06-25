@@ -1,16 +1,16 @@
 <template>
      <div class=" main-container space-y-16">
-                <div class=" w-full grid grid-cols-2 gap-8">
+                <div class=" w-full grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div v-for="(plan,index) in plans" :key="index">
                         <PlanCard :plan="plan" />
                     </div>
                 </div>
 
                 <div class=" w-full flex-col flex items-center space-y-10 ">
-                    <p class=" text-white text-xl font-normal text-center">
+                    <p class=" text-white text-base md:text-xl font-normal text-center">
                         Wir supporten Vereine und sponsoren evtl. auch dein Event. 
                     </p>
-                    <button class=" max-w-[18.75rem] w-full h-[3rem] border border-white text-center text-white text-xl font-bold hover:bg-tertiary hover:border-tertiary duration-300">
+                    <button class=" max-w-[18.75rem] w-full h-[3rem] border border-white text-center text-white ext-base md:text-xl font-bold hover:bg-tertiary hover:border-tertiary duration-300">
                         Hier Anfragen
                     </button>
                 </div>
