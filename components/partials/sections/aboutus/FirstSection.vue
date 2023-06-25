@@ -1,6 +1,6 @@
 <template>
     <section class=" pt-10 md:pt-20 pb-10 md:pb-28 space-y-10 md:space-y-36">
-        <div class="main-container  w-full flex flex-col items-start space-y-4">
+        <div class="main-container  w-full flex flex-col items-start space-y-2 md:space-y-4">
             <div class=" flex items-center space-x-2">
                 <Star class=" w-[0.8125rem] h-[0.8125rem] md:w-[2rem] md:h-[2.125rem] text-primary" />
                 <span class=" text-xl md:text-5xl font-bold text-tertiary">This is us</span>
