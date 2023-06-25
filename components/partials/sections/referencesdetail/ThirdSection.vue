@@ -1,9 +1,9 @@
 <template>
     <!-- home fourth section -->
-    <section class="flex flex-col gap-y-16">
+    <section class="flex flex-col gap-y-10 md:gap-y-16">
          
         <div class="w-full main-container relative overflow-visible">
-            <p class=" text-[3.5rem]   leading-[5rem] max-w-3xl">
+            <p class=" text-xl md:text-[3.5rem]   md:leading-[5rem] max-w-3xl">
                 Weitere Events
             </p>
         </div>

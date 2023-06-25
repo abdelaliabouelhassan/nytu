@@ -5,8 +5,8 @@
             <slot />
         </div>
         <!-- play button -->
-        <button class="w-[7.75rem] h-[7.75rem] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-            <Play class="w-full h-full"/>
+        <button class=" w-[2.61481rem]  h-[2.61481rem] md:w-[7.75rem] md:h-[7.75rem] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+            <Play class="w-full h-full "/>
         </button>
         
     </div>

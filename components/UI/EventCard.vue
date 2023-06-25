@@ -7,12 +7,12 @@
         </div>
         <div class="black-gradient h-full w-full absolute top-0 left-0"></div>
         <div class="absolute bottom-11 left-5 flex flex-col gap-y-4 max-w-[80%] ">
-            <div class="text-3xl font-bold ">{{event.title}}</div>
+            <div class=" text-[1.68569rem] md:text-3xl font-bold ">{{event.title}}</div>
             <!-- opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-300 ease-linear -->
-            <div ref="description" class="description overflow-hidden">{{event.description}}</div>
+            <div ref="description" class="description md:text-base text-sm overflow-hidden">{{event.description}}</div>
             <nuxt-link :to="'references-details/'+event.id">
                 <div class="flex items-center gap-x-2 text-primary font-bold">
-                   <div>Mehr</div> 
+                   <div class=" md:text-base text-sm">Mehr</div> 
                    <svg class="w-4 h-5"  width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path  fill="currentColor" d="M13.6289 4.66117C13.8242 4.46591 13.8242 4.14933 13.6289 3.95406L10.447 0.772083C10.2517 0.576821 9.93512 0.576821 9.73986 0.772083C9.54459 0.967345 9.54459 1.28393 9.73986 1.47919L12.5683 4.30762L9.73986 7.13604C9.54459 7.33131 9.54459 7.64789 9.73986 7.84315C9.93512 8.03841 10.2517 8.03841 10.447 7.84315L13.6289 4.66117ZM0.275391 4.80762H13.2754V3.80762H0.275391V4.80762Z"/>
                     </svg>
