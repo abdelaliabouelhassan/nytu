@@ -3,11 +3,11 @@
         <HeroSection />
         <SecondSection />
         <ThirdSection />
-        <!-- <FourthSection /> -->
-         <FifthSection />
-        <!--<SixthSection />
+        <FourthSection />
+        <FifthSection />
+        <SixthSection />
         <SeventhSection/>
-        <EightSection /> -->
+        <EightSection />
     </div> 
 </template>
 

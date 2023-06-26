@@ -1,27 +1,26 @@
 <template>
-    <section class="flex flex-col gap-y-10 md:gap-y-16 ">
+    <section class="flex flex-col gap-y-16">
         <div class="w-full main-container relative overflow-visible">
             <div class=" flex items-center space-x-2 ">
-                <Star class=" w-[0.8125rem] h-[0.8125rem] md:w-[2rem] md:h-[2.125rem] text-primary " />
-                <span class=" ext-xl md:text-5xl font-bold">Testimonials</span>
-                <Star class=" w-[0.8125rem] h-[0.8125rem] md:w-[2rem] md:h-[2.125rem] text-primary" />
+                <Star class="w-[0.8125rem] h-[0.8125rem] md:w-[2rem] md:h-[2.125rem] text-primary " />
+                <span class="text-xl md:text-5xl font-bold">Testimonials</span>
+                <Star class="w-[0.8125rem] h-[0.8125rem] md:w-[2rem] md:h-[2.125rem] text-primary" />
             </div>
-            <p class=" text-xl md:text-[3.5rem]   leading-[5rem] max-w-3xl">
+            <p class="text-xl md:text-[3.5rem] md:leading-[5rem] max-w-3xl">
                 Was unsere Kunden sagen
             </p>
         </div>
-        <BaseCarousel class="relative main-container">
+        <BaseCarousel class="relative w-full main-container flex flex-col gap-y-9">
             <div class="carousel-container ">
                 <div class="carousel w-full flex">
                     <TestimonialCard v-for="(testimonial,index) in testimonials" :key="index" :testimonial="testimonial" 
                             class="shrink-0 w-full" />
                 </div>
-                <div class="absolute bottom-0 right-0 flex items-center gap-x-2">
-                    <LeftArrow class="bg-white"/>
-                    <RightArrow class="bg-white"/>
-                </div>
             </div>
-            
+            <div class="w-full justify-end md:absolute md:bottom-0 md:right-0 flex items-center gap-x-2">
+                <LeftArrow class="bg-white"/>
+                <RightArrow class="bg-white"/>
+            </div>
         </BaseCarousel>
     </section>
 </template>
