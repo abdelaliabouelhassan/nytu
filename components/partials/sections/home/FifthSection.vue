@@ -15,7 +15,7 @@
         <BaseCarousel class=" flex flex-col gap-y-9">
             <div class="carousel-container">
                 <div class="carousel main-container flex  gap-x-8 gap-y-20">
-                    <EventCard v-for="(event,index) in events" :key="event.id" :event="event" 
+                    <EventCard v-for="event in events" :key="event.id" :event="event" 
                             class="shrink-0 w-[19.2rem] " />
                     
                 </div>

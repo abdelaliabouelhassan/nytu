@@ -1,13 +1,13 @@
 <template>
-    <div class="flex flex-col gap-y-[7.875rem]">
+    <div class="flex flex-col gap-y-20 md:gap-y-[7.875rem] w-full">
         <HeroSection />
         <SecondSection />
         <ThirdSection />
-        <FourthSection />
-        <FifthSection />
-        <SixthSection />
+        <!-- <FourthSection /> -->
+         <FifthSection />
+        <!--<SixthSection />
         <SeventhSection/>
-        <EightSection />
+        <EightSection /> -->
     </div> 
 </template>
 

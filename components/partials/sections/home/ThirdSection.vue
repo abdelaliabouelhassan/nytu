@@ -2,26 +2,23 @@
     <!-- home third section -->
     <section class="bg-tertiary py-[5.625rem] text-white overflow-hidden">
         <BaseCarousel class="">
-            <div class="main-container relative overflow-visible">
+            <div class="main-container relative overflow-visible ">
                 <div class=" flex items-center space-x-2 text-primary">
-                    <Star class=" w-[2rem] h-[2.125rem] " />
-                    <span class=" text-5xl font-bold">Why us</span>
-                    <Star class=" w-[2rem] h-[2.125rem]" />
+                    <Star class=" w-[0.8125rem] h-[0.8125rem] md:w-[2rem] md:h-[2.125rem] " />
+                    <span class="text-xl md:text-5xl font-bold">Why us</span>
+                    <Star class=" w-[0.8125rem] h-[0.8125rem] md:w-[2rem] md:h-[2.125rem]" />
                 </div>
-                <p class=" text-[3.5rem]   leading-[5rem] max-w-3xl">
-                We take care of your needs before and after your events
+                <p class="text-xl max-w-[16rem] md:text-[3.5rem]   md:leading-[5rem] md:max-w-3xl">
+                    We take care of your needs before and after your events
                 </p>
-                <div class="flex items-center gap-x-2 absolute top-0 -right-12">
-                    <LeftArrow/>
-                    <RightArrow/>
-                </div>
+                
             </div>
-            <div class="carousel-container py-24 flex" >
-                <div class="carousel main-container flex z-10 relative" ref="carousel">
+            <div class="carousel-container pt-12 pb-10 md:py-24 flex relative" >
+                <div class="carousel main-container flex z-10 " ref="carousel">
                     <!-- carousel-item 1 -->
-                    <div class="z-10 shrink-0 flex flex-col gap-y-[5.625rem] w-[60rem] mr-[10.25rem]">
+                    <div class="z-10 shrink-0 flex md:flex-col gap-x-12 mr-12 mt-28 md:mt-0 md:gap-y-[5.625rem] md:w-[60rem] md:mr-[10.25rem]">
                         <!-- feature -->
-                        <div class="flex items-center gap-x-8 group w-fit cursor-default">
+                        <div class="flex flex-col items-center gap-8 group w-fit text-center cursor-default md:flex-row md:text-start">
                             <!-- feature image -->
                             <div class="w-[10.625rem] h-[10.625rem] rounded-full  group overflow-hidden relative">
                                 <div class="group-hover:hidden bg-white w-full h-full flex items-center justify-center">
@@ -49,7 +46,7 @@
                         </div>
 
                         <!-- feature -->
-                        <div class="flex items-center gap-x-8 ml-auto group w-fit">
+                        <div class="flex flex-col items-center gap-8 group w-fit text-center cursor-default md:flex-row md:text-start ml-auto">
                             <!-- feature image -->
                             <div class="w-[10.625rem] h-[10.625rem] rounded-full  overflow-hidden relative">
                                 <img class="w-full h-full object-contain" src="/images/home/multichannel_marketing.svg" alt="multichannel_marketing">
@@ -58,7 +55,7 @@
                                 </div>
                             </div>
                             <!-- feature content -->
-                            <div class="flex flex-col gap-y-3 font-bold max-w-[17.875rem]">
+                            <div class="flex flex-col gap-y-3 font-bold max-w-[20rem] md:max-w-[17.875rem] ">
                                 <div class="text-[1.375rem] group-hover:text-secondary">Multichannel Marketing</div>
                                 <div >Analog & Digital mit Partner & Experten</div>
                             </div>
@@ -67,8 +64,8 @@
                     </div>
 
                     <!-- carousel-item 2 Ticket-->
-                    <div class="z-10 shrink-0  text-black group mt-8 mr-[19.75rem] ">
-                        <div class="bg-secondary flex flex-col gap-y-4 px-8 py-10 font-bold w-[27rem] rounded-3xl relative">
+                    <div class="z-10 shrink-0  text-black group mt-10 mr-12 md:mt-8 md:mr-[19.75rem] ">
+                        <div class="bg-secondary flex flex-col gap-y-4 px-8 py-10 font-bold w-[22rem]  md:w-[27rem] rounded-[2rem] relative">
                             <div class="absolute top-0 right-0 ">
                                 <!-- ticket img -->
                                 <svg class="w-[7.125rem] h-[7.125rem] absolute -top-[3.8rem] -right-8" width="114" height="111" viewBox="0 0 114 111" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -106,25 +103,9 @@
                     </div>
 
                     <!-- carousel-item 3 -->
-                    <div class="z-10 shrink-0 flex flex-col gap-y-[5.625rem] w-[60rem] mr-[36.875rem]">
+                    <div class="z-10 shrink-0 flex md:flex-col gap-x-12 mr-12 mt-28 md:mt-0 md:gap-y-[5.625rem] md:w-[60rem] md:mr-[36.875rem]">
                         <!-- feature -->
-                        <div class="flex items-center gap-x-8 ml-auto group w-fit">
-                            <!-- feature image -->
-                            <div class="w-[10.625rem] h-[10.625rem] rounded-full  overflow-hidden relative">
-                                <img class="w-full h-full object-contain" src="/images/home/maximal_flexibility.svg" alt="maximal_flexibility">
-                                <div class="hidden group-hover:flex bg-black/40 w-full h-full items-center justify-center absolute top-0 left-0">
-                                    <Play @click="openVideo('/images/home/multichannel_marketing.svg')" class="w-[5.375rem] h-[5.375rem]"/>
-                                </div>
-                            </div>
-                            <!-- feature content -->
-                            <div class="flex flex-col gap-y-3 font-bold max-w-[17.875rem]">
-                                <div class="text-[1.375rem] group-hover:text-secondary">Maximale Flexibilität</div>
-                                <div>Egal was. Egal wie gross. NYTU eignet sich für jeden Anlass in jeder Grösse.</div>
-                            </div>
-                        </div>
-
-                        <!-- feature -->
-                        <div class="flex items-center gap-x-8 group w-fit cursor-default">
+                        <div class="flex flex-col items-center gap-8 group w-fit text-center cursor-default md:flex-row md:text-start md:order-2">
                             <!-- feature image -->
                             <div class="w-[10.625rem] h-[10.625rem] rounded-full  group overflow-hidden relative">
                                 <div class="group-hover:hidden bg-white w-full h-full flex items-center justify-center">
@@ -147,22 +128,36 @@
                                 </div>
                             </div>
                             <!-- feature content -->
-                            <div class="flex flex-col gap-y-3 font-bold max-w-[17.875rem]">
+                            <div class="flex flex-col gap-y-3 font-bold max-w-[19.5rem] md:max-w-[17.875rem]">
                                 <div class="text-[1.375rem] group-hover:text-secondary">Datenschutz</div>
                                 <div >Sicher ist sicher. Ihre Daten werden in der Schweiz unter Einhaltung der DSGVO nach den höchsten Sicherheitsstandards gespeichert.</div>
                             </div>
                         </div>
 
-                        
-                        
+                        <!-- feature -->
+                        <div class="flex flex-col items-center gap-8 group w-fit text-center cursor-default md:flex-row md:text-start ml-auto md:order-1">
+                            <!-- feature image -->
+                            <div class="w-[10.625rem] h-[10.625rem] rounded-full  overflow-hidden relative">
+                                <img class="w-full h-full object-contain" src="/images/home/maximal_flexibility.svg" alt="maximal_flexibility">
+                                <div class="hidden group-hover:flex bg-black/40 w-full h-full items-center justify-center absolute top-0 left-0">
+                                    <Play @click="openVideo('/images/home/multichannel_marketing.svg')" class="w-[5.375rem] h-[5.375rem]"/>
+                                </div>
+                            </div>
+                            <!-- feature content -->
+                            <div class="flex flex-col gap-y-3 font-bold max-w-[20rem] md:max-w-[17.875rem]">
+                                <div class="text-[1.375rem] group-hover:text-secondary">Maximale Flexibilität</div>
+                                <div>Egal was. Egal wie gross. NYTU eignet sich für jeden Anlass in jeder Grösse.</div>
+                            </div>
+                        </div>
+
                     </div>
 
                     <!-- carousel-item 4 -->
-                    <div class="z-10 shrink-0 flex flex-col mr-8">
+                    <div class="z-10 shrink-0 flex md:flex-col mr-12 mt-28 md:mt-0 md:mr-8">
                         <!-- feature -->
-                        <div class="mt-auto flex items-center gap-x-8 group w-full cursor-default">
+                        <div class="w-full  flex flex-col text-center items-center gap-8 group cursor-default md:flex-row md:mt-auto md:text-start">
                             <!-- feature image -->
-                            <div class="w-[10.625rem] h-[10.625rem] flex group relative self-end">
+                            <div class="w-[10.625rem] h-[10.625rem] flex group relative md:self-end">
                                 <div class="z-20 group-hover:hidden bg-white rounded-full w-full h-full flex items-center justify-center overflow-hidden">
                                     <svg class="w-[5.375rem] h-[5.375rem]" width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_1149_9337)">
@@ -179,12 +174,12 @@
                                 <div class="z-20 hidden group-hover:flex bg-primary w-full h-full items-center justify-center rounded-full">
                                     <Play @click="openVideo('/images/home/multichannel_marketing.svg')" class="w-[5.375rem] h-[5.375rem]"/>
                                 </div>
-                                <div class="h-[23.75rem] w-[29.5625rem] absolute bottom-1/2 right-1/2 z-10">
+                                <div class="hidden md:block h-[23.75rem] w-[29.5625rem] absolute bottom-1/2 right-1/2 z-10">
                                     <img class="h-full object-contain pointer-events-none" src="/images/home/multichannel_marketing_2.svg" alt="multichannel_marketing_2" srcset="">
                                 </div>
                             </div>
                             <!-- feature content -->
-                            <div class="flex flex-col gap-y-3 font-bold max-w-[17.875rem]">
+                            <div class="flex flex-col gap-y-3 font-bold max-w-[20rem] md:max-w-[17.875rem]">
                                 <div class="text-[1.375rem] group-hover:text-secondary">Multichannel Marketing</div>
                                 <div >Teilen Sie Ihre Veranstaltungen per Klick auf Ihre Website, in Newslettern, auf Social Media oder auch in gedruckter Form in die Briefkasten Ihrer Zielgruppe.</div>
                             </div>
@@ -192,9 +187,9 @@
                     </div>
 
                     <!-- carousel-item 5 -->
-                    <div class="z-10 shrink-0 flex flex-col gap-y-[5.625rem] w-[62rem] box-content" ref="last_carousel_item">
+                    <div class="z-10 shrink-0 flex md:flex-col gap-x-12 mr-12 mt-28 md:mt-0 md:gap-y-[5.625rem] md:w-[62rem] box-content" ref="last_carousel_item">
                         <!-- feature -->
-                        <div class="flex items-center gap-x-8 group w-fit">
+                        <div class="flex flex-col items-center gap-8 group w-fit text-center cursor-default md:flex-row md:text-start">
                             <!-- feature image -->
                             <div class="w-[10.625rem] h-[10.625rem] rounded-full  overflow-hidden relative">
                                 <img class="w-full h-full object-contain " src="/images/home/zahlungsplattform.svg" alt="zahlungsplattform">
@@ -203,14 +198,14 @@
                                 </div>
                             </div>
                             <!-- feature content -->
-                            <div class="flex flex-col gap-y-3 font-bold max-w-[17.875rem]">
+                            <div class="flex flex-col gap-y-3 font-bold max-w-[19.5rem] md:max-w-[17.875rem]">
                                 <div class="text-[1.375rem] group-hover:text-secondary">Zahlungsplattform</div>
                                 <div>Wenn’s um’s Geld geht: ein Kinderspiel. Zahlungen per QR-Rechnungen, Kreditkarten, TWINT und weitere Plattformen lassen sich bequem auf NYTU abwickeln.</div>
                             </div>
                         </div>
 
                         <!-- feature -->
-                        <div class="flex items-center gap-x-8 ml-auto group w-fit" >
+                        <div class="flex flex-col items-center gap-8 group w-fit text-center cursor-default md:flex-row md:text-start ml-auto" >
                             <!-- feature image -->
                             <div class="w-[10.625rem] h-[10.625rem] rounded-full  overflow-hidden relative">
                                 <img class="w-full h-full object-contain" src="/images/home/crm_in_and_out.svg" alt="crm_in_and_out">
@@ -219,23 +214,45 @@
                                 </div>
                             </div>
                             <!-- feature content -->
-                            <div class="flex flex-col gap-y-3 font-bold max-w-[17.875rem]">
+                            <div class="flex flex-col gap-y-3 font-bold max-w-[19.5rem] md:max-w-[17.875rem]">
                                 <div class="text-[1.375rem] group-hover:text-secondary">CRM In- & Out</div>
                                 <div >Einfachstes Adresshandling: Dank intelligenter Adress-Synchronisierung sind alle ihre Adressen auf dem neusten Stand – unmittelbar und ganz bequem.</div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="w-[290rem] flex gap-x-32 z-0 absolute left-0 top-1/2 -translate-y-1/2 overflow-visible">
-                        <img src="/images/eventsmadeeasy_primary.svg" class="w-[143.75rem]  object-contain ">
-                        <img src="/images/eventsmadeeasy_primary.svg" class="w-[143.75rem]  object-contain ">
+                    
+                </div>
+
+                <!-- moving background images -->
+                <div class="w-[192rem] z-0 absolute left-0 top-20 overflow-hidden pl-4 
+                            md:pl-0 md:w-[322rem]  md:top-1/2 md:-translate-y-1/2 flex">
+                    <div class="w-screen md:w-[calc(100vw-4rem)] overflow-visible flex">
+                        <div class="move-animation flex gap-x-12 md:gap-x-32 mx-auto max-w-[61.5rem]  overflow-x-visible ">
+                            
+                            <div class="w-[67.3125rem] md:w-[143.75rem] shrink-0">
+                                <img src="/images/eventsmadeeasy_primary.svg" class="w-full h-f  object-contain">
+                            </div>
+                            <div class="w-[67.3125rem] md:w-[143.75rem] shrink-0">
+                                <img src="/images/eventsmadeeasy_primary.svg" class="w-full h-f  object-contain">
+                            </div>
+                            <div class="w-[67.3125rem] md:w-[143.75rem] shrink-0">
+                                <img src="/images/eventsmadeeasy_primary.svg" class="w-full h-f  object-contain">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
                 
-                
 
             </div>
+
+
+            <div class="w-full main-container mx-auto flex justify-center items-center gap-x-2 md:justify-end md:absolute md:top-0 md:left-1/2 md:-translate-x-1/2">
+                <LeftArrow/>
+                <RightArrow/>
+            </div>
+           
 
         </BaseCarousel>
 
@@ -275,3 +292,30 @@ onUnmounted(() => {
     window.removeEventListener('resize',setLastCarouselItemPadding)
 })
 </script>
+
+<style scoped>
+    .move-animation{
+        animation: move 10s ease  infinite ;
+    }
+    @media (min-width:48rem) {
+        .move-animation{
+            animation: move_md 10s ease  infinite ;
+        }
+    }
+    @keyframes move {
+        0% {
+            transform: translateX(0)
+        }
+        100% {
+            transform: translateX(-13rem)
+        }
+    }
+    @keyframes move_md {
+        0% {
+            transform: translateX(0)
+        }
+        100% {
+            transform: translateX(-26rem)
+        }
+    }
+</style>
