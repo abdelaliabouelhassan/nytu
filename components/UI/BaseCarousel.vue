@@ -125,7 +125,6 @@ onUnmounted(() => {
 <style scoped>
 
     .carousel-parent :deep(.carousel-container){
-        overflow-y:visible;
         overflow-x:auto;
         user-select: none;
         scrollbar-width: thin; /* For Firefox */

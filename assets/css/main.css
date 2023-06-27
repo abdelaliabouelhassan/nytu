@@ -5,7 +5,7 @@
 
 
 .main-container {
-    @apply  max-w-[61.5rem] mx-auto px-4 lg:px-0;
+    @apply  max-w-[61.5rem] mx-auto px-4 ;
 }
 
 .accordion .accordion-content {

@@ -1,31 +1,31 @@
 <template>
     <!-- home fourth section -->
-    <section class="flex flex-col gap-y-16">
+    <section class="flex flex-col gap-y-9 md:gap-y-16">
          
         <div class="w-full main-container relative overflow-visible">
-            <div class=" flex items-center space-x-2 text-primary">
-                <Star class=" w-[2rem] h-[2.125rem] " />
-                <span class=" text-5xl font-bold">Referenzen</span>
-                <Star class=" w-[2rem] h-[2.125rem]" />
+            <div class=" flex items-center space-x-2">
+                <Star class=" w-[0.8125rem] h-[0.8125rem] md:w-[2rem] md:h-[2.125rem] text-primary" />
+                <span class=" text-xl md:text-5xl font-bold">Referenzen</span>
+                <Star class=" w-[0.8125rem] h-[0.8125rem] md:w-[2rem] md:h-[2.125rem] text-primary" />
             </div>
-            <p class=" text-[3.5rem]   leading-[5rem] max-w-3xl">
+            <p class="text-xl md:text-[3.5rem] md:leading-[5rem] max-w-3xl">
                 Unsere letzten Events
             </p>
         </div>
-        <BaseCarousel class=" flex flex-col gap-y-9">
+        <BaseCarousel class="flex flex-col gap-y-9 md:gap-y-16">
             <div class="carousel-container">
                 <div class="carousel main-container flex  gap-x-8 gap-y-20">
-                    <EventCard v-for="(event,index) in events" :key="event.id" :event="event" 
-                            class="shrink-0 w-[19.2rem] " />
+                    <EventCard v-for="event in events" :key="event.id" :event="event" 
+                            class="shrink-0 w-[17.25rem] md:w-[19.2rem] " />
                     
                 </div>
             </div>
             <div class="w-full main-container flex items-center gap-x-2">
-                    <LeftArrow/>
-                    <RightArrow/>
-                    <button class="w-fit px-12  bg-primary h-12 text-center text-white font-semibold text-xl">
+                    <button class="w-fit px-12  bg-primary h-12 text-center text-white font-semibold md:text-xl md:order-3">
                         Alle Events
                     </button>
+                    <LeftArrow  class="md:order-1"/>
+                    <RightArrow  class="md:order-2"/>
             </div>
         </BaseCarousel>
     </section>

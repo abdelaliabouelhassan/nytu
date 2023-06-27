@@ -15,6 +15,9 @@ module.exports = {
         secondary:'#85F26C',
         tertiary:'#1C0544'
       },
+      screens: {
+        'xs': '475px',
+      },
     },
   },
   plugins: [],
