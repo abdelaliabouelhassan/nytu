@@ -10,8 +10,10 @@
         <BaseCarousel class="flex flex-col gap-y-9 md:gap-y-16">
             <div class="carousel-container">
                 <div class="carousel main-container flex  gap-x-8 gap-y-20">
-                    <EventCard v-for="event in events" :key="event.id" :event="event" 
+                    <div v-for="event in events" :key="event.id"  class="last:pr-4 last:box-content">
+                        <EventCard  :event="event"
                             class="shrink-0 w-[17.25rem] md:w-[19.2rem] " />
+                    </div>
                     
                 </div>
             </div>

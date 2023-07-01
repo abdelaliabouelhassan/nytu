@@ -13,10 +13,10 @@
             </p>
         </div>
         <BaseCarousel class=" flex flex-col gap-y-9 md:gap-y-16">
-            <div class="carousel-container">
-                <div class="carousel main-container flex  gap-x-8 gap-y-20">
+            <div class="carousel-container ">
+                <div class="carousel main-container flex  gap-x-8 gap-y-20 ">
                     <TeamCard v-for="(person,index) in team" :key="index" :person="person" 
-                            class="shrink-0 w-[17.25rem] md:w-[19.2rem] " />
+                            class="shrink-0 w-[17.25rem] md:w-[19.2rem] last:pr-4 last:box-content" />
                 </div>
             </div>
             <div class="w-full main-container flex items-center gap-x-2">

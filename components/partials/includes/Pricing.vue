@@ -2,7 +2,7 @@
      <div class=" main-container space-y-16">
                 <div class=" w-full grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div v-for="(plan,index) in plans" :key="index">
-                        <PlanCard :plan="plan" />
+                        <PlanCard :plan="plan" class="max-w-[47.35rem]"/>
                     </div>
                 </div>
 
