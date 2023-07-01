@@ -1,7 +1,7 @@
 <template>
     <section class=" w-full main-container pt-10 md:pt-20">
         <div class=" w-full flex flex-col items-start space-y-10">
-                <h1 class=" text-3xl md:text-[5rem] text-tertiary font-normal">The Zurich OpenAir</h1>
+                <h1 class=" text-3xl md:text-[4.7rem] lg:text-[5rem] text-tertiary font-normal">The Zurich OpenAir</h1>
                 <div class=" w-full">
                     <Video @click="showVideo = true">
                         <img src="/images/events.svg" alt="">
