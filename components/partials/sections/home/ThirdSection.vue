@@ -13,7 +13,7 @@
                 </p>
                 
             </div>
-            <div class="carousel-container pt-12 pb-10 md:py-24 flex relative" >
+            <div ref="carousel_container" class="carousel-container pt-12 pb-10 md:py-24 flex relative" >
                 <div class="carousel main-container flex z-10 " ref="carousel">
                     <!-- carousel-item 1 -->
                     <div class="z-10 shrink-0 flex md:flex-col gap-x-12 mr-12 mt-28 md:mt-0 md:gap-y-[5.625rem] md:w-[60rem] md:mr-[10.25rem]">
@@ -225,19 +225,19 @@
                 </div>
 
                 <!-- moving background images -->
-                <div class="w-[192rem] z-0 absolute left-0 top-20 overflow-hidden pl-4 
-                            md:pl-0 md:w-[322rem]  md:top-1/2 md:-translate-y-1/2 flex">
+                <div ref="movingBackground" class="z-0 absolute left-0 top-20 overflow-hidden pl-4 
+                            md:pl-0 md:top-1/2 md:-translate-y-1/2 flex">
                     <div class="w-screen md:w-[calc(100vw-4rem)] overflow-visible flex">
                         <div class="move-animation flex gap-x-12 md:gap-x-32 mx-auto max-w-[61.5rem]  overflow-x-visible ">
                             
                             <div class="w-[67.3125rem] md:w-[143.75rem] shrink-0">
-                                <img src="/images/eventsmadeeasy_primary.svg" class="w-full h-f  object-contain">
+                                <img src="/images/eventsmadeeasy_primary.svg" class="w-full object-contain">
                             </div>
                             <div class="w-[67.3125rem] md:w-[143.75rem] shrink-0">
-                                <img src="/images/eventsmadeeasy_primary.svg" class="w-full h-f  object-contain">
+                                <img src="/images/eventsmadeeasy_primary.svg" class="w-full object-contain">
                             </div>
                             <div class="w-[67.3125rem] md:w-[143.75rem] shrink-0">
-                                <img src="/images/eventsmadeeasy_primary.svg" class="w-full h-f  object-contain">
+                                <img src="/images/eventsmadeeasy_primary.svg" class="w-full object-contain">
                             </div>
                         </div>
                     </div>
@@ -271,6 +271,8 @@ import Play from "@/components/UI/Icons/Play.vue"
 
 const last_carousel_item = ref(null)
 const carousel = ref(null)
+const carousel_container = ref(null)
+const movingBackground = ref(null)
 
 const showVideo = ref(false)
 const videoSrc = ref(null)
@@ -280,16 +282,18 @@ function openVideo(src) {
     videoSrc.value = src
 }
 
-function setLastCarouselItemPadding() {
+function setCssValues() {
     last_carousel_item.value.style.paddingRight = window.getComputedStyle(carousel.value).getPropertyValue('margin-right')
+    movingBackground.value.style.width = `${carousel_container.value.scrollWidth}px`
 }
 
+
 onMounted(() => {
-        setLastCarouselItemPadding()
-        window.addEventListener('resize',setLastCarouselItemPadding)
+    setCssValues()
+    window.addEventListener('resize',setCssValues)
 })
 onUnmounted(() => {
-    window.removeEventListener('resize',setLastCarouselItemPadding)
+    window.removeEventListener('resize',setCssValues)
 })
 </script>
 
