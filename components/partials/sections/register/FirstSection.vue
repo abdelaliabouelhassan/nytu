@@ -41,11 +41,11 @@
                     <div class=" flex items-start space-x-2">
                       <div class="control-group">
                         <label class="control control-checkbox">
-                                <input type="checkbox" checked="checked" />
+                                <input type="checkbox"  />
                             <div class="control_indicator"></div>
                         </label>
                       </div>
-                        <p class=" text-white text-xl font-normal">Ich akzeptiere die Allgemeinen Geschäftsbedingungen und bin mit dem Datenschutz einverstanden.</p>
+                        <p class=" text-white text-xl font-normal">Ich akzeptiere die Allgemeinen <NuxtLink to="/gtc" class=" cursor-pointer underline hover:underline text-opacity-80 duration-200">Geschäftsbedingungen</NuxtLink> und bin mit dem <NuxtLink  to="/data-privacy" class=" underline hover:underline text-opacity-80 duration-200">Datenschutz</NuxtLink>  einverstanden.</p>
                     </div>
                     
                     <button type="submit" class=" w-full text-center text-base md:text-xl font-bold text-white bg-tertiary md:w-[19.938rem] h-[3rem]">Anfrage senden</button>

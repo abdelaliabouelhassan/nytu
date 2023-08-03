@@ -26,3 +26,53 @@
 .accordion .chevron {
   transition: all 0.2s ease;
 }
+
+.title {
+  font-size: 1.25rem;
+  --text-opacity: 1;
+  color: #374151;
+  color: rgba(55, 65, 81, var(--text-opacity));
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  margin-top: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.main-text {
+  font-size: 0.875rem;
+  --text-opacity: 1;
+  color: #4b5563;
+  color: rgba(75, 85, 99, var(--text-opacity));
+  font-weight: 400;
+  line-height: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .title {
+    font-size: 1.875rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .main-text {
+    font-size: 1.125rem;
+  }
+}
+
+
+.btn-ripple  {
+  background: transparent;
+  animation: ripple 1s infinite;
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0px #9099FF, 0 0 0 0px #fff, 0 0 0 0px #9099FF, 0 0 0 0px #fff, 0 0 0 0px #9099FF, 0 0 0 0px #fff, 0 0 0 0px #9099FF, 0 0 0 0px #fff;
+  }
+  100% {
+    box-shadow: 0 0 0 15px #9099FF, 0 0 0 17px rgba(255, 255, 255, 0), 0 0 0 40px #9099FF, 0 0 0 42px rgba(255, 255, 255, 0), 0 0 0 7px #9099FF, 0 0 0 7px rgba(255, 255, 255, 0), 0 0 0 7px #9099FF, 0 0 0 7px rgba(255, 255, 255, 0);
+  }
+}
+
