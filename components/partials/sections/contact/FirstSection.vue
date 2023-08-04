@@ -1,6 +1,10 @@
 <template>
-    <section class=" w-full bg-primary py-10  md:py-20">
-        <div class=" main-container space-y-10  md:space-y-40">
+    <section class=" w-full bg-primary py-10  md:py-20 space-y-10">
+        <div>
+                        <img src="/images/us.svg" class="main-container  w-full h-[12.19rem] md:max-h-[31.938rem] object-cover md:h-full" alt="">
+
+        </div>
+        <div class=" main-container space-y-10   md:space-y-40">
             <div class=" w-full flex flex-col items-start space-y-4">
                 <div class=" flex items-center space-x-2">
                     <Star class=" w-[0.8125rem] h-[0.8125rem] md:w-[2rem] md:h-[2.125rem] text-white" />
@@ -22,12 +26,12 @@
 
            <div class=" w-full grid grid-cols-2">
              <div class=" flex flex-col items-start space-y-8 md:space-y-20 lg:pl-14">
-                <p class=" text-xl md:text-5xl text-white font-medium">
+                <p class=" text-xl  text-white font-normal">
                     nytu AG <br>
                     Ruheberg 16 <br>
                     9327 Tübach 
                 </p>
-                 <p class=" text-xl md:text-5xl text-white font-medium">
+                 <p class=" text-xl  text-white font-normal">
                     +41 71 511 74 55 <br>
                     post@nytu.ch
                 </p>
