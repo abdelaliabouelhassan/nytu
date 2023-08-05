@@ -2,24 +2,19 @@
      <div class=" main-container space-y-16">
                 <div class=" w-full grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div v-for="(plan,index) in plans" :key="index">
-                        <PlanCard :plan="plan" class="max-w-[47.35rem]"/>
+                        <PlanCard v-animate :plan="plan" class="max-w-[47.35rem]"/>
                     </div>
                 </div>
 
-                <div class=" w-full flex-col flex items-center space-y-10 ">
-                    <p class=" text-white text-base md:text-xl font-normal text-center">
-                        Wir supporten Vereine und sponsoren evtl. auch dein Event. 
-                    </p>
-                    <button class=" max-w-[18.75rem] w-full h-[3rem] border border-white text-center text-white ext-base md:text-xl font-bold hover:bg-tertiary hover:border-tertiary duration-300">
-                        Hier Anfragen
-                    </button>
-                </div>
+               
         </div>
 </template>
 
 
 <script setup>
  import PlanCard from "@/components/UI/PlanCard.vue"
+ import Star from "@/components/UI/Icons/Star.vue"
+
 
   const plans = ref([
     {

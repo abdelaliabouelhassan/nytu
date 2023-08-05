@@ -2,17 +2,17 @@
     <section class=" w-full bg-primary  py-20">
         <div class=" main-container  space-y-20">
             <div class=" w-full flex flex-col items-start space-y-4">
-                <div class=" flex items-center space-x-2">
+                <div v-animate class=" flex items-center space-x-2">
                     <Star class=" w-[0.8125rem] h-[0.8125rem] md:w-[2rem] md:h-[2.125rem] text-white" />
                     <span class=" text-xl md:text-5xl font-bold text-white">Registrieren</span>
                     <Star class=" w-[0.8125rem] h-[0.8125rem] md:w-[2rem] md:h-[2.125rem] text-white" />
                 </div>
-                <p class=" text-3xl md:text-[5rem] text-white font-light md:leading-[5rem]">
+                <p v-animate class=" text-3xl md:text-[5rem] text-white font-light md:leading-[5rem]">
                    Account erstellen & loslegen
                 </p>
             </div>
             <div class=" flex justify-end ">
-                <div class=" max-w-[18.5rem] md:max-w-[31.875rem] w-full">
+                <div v-animate class=" max-w-[18.5rem] md:max-w-[31.875rem] w-full">
                     <p class=" text-white font-normal text-base md:text-xl">
                         Starten Sie mit unserem Essential-Paket ohne wiederkehrende Kosten.Sie können jederzeit ein Upgrade Ihres Abonnements vornehmen, um die Plattform noch besser zu nutzen.
                         <br> <br>
@@ -21,7 +21,7 @@
                 </div>
             </div>
 
-          <form action="" method="post" class=" space-y-4">
+          <form v-animate action="" method="post" class=" space-y-4">
             <input type="text" class=" w-full h-[3.25rem] border border-white bg-transparent text-white text-base md:text-xl placeholder-white pl-4 md:pl-8 outline-none pr-4" placeholder="Unternehmen" required>
             <div class=" relative w-full">
                   <input type="text" class=" w-full  h-[3.25rem] border border-white bg-transparent text-white text-base md:text-xl placeholder-white pl-4 md:pl-8 outline-none pr-28 md:pr-36" placeholder="Ihre persönliche Webadresse" required>
@@ -41,11 +41,11 @@
                     <div class=" flex items-start space-x-2">
                       <div class="control-group">
                         <label class="control control-checkbox">
-                                <input type="checkbox" checked="checked" />
+                                <input type="checkbox"  />
                             <div class="control_indicator"></div>
                         </label>
                       </div>
-                        <p class=" text-white text-xl font-normal">Ich akzeptiere die Allgemeinen Geschäftsbedingungen und bin mit dem Datenschutz einverstanden.</p>
+                        <p class=" text-white text-xl font-normal">Ich akzeptiere die Allgemeinen <NuxtLink to="/gtc" class=" cursor-pointer underline hover:underline text-opacity-80 duration-200">Geschäftsbedingungen</NuxtLink> und bin mit dem <NuxtLink  to="/data-privacy" class=" underline hover:underline text-opacity-80 duration-200">Datenschutz</NuxtLink>  einverstanden.</p>
                     </div>
                     
                     <button type="submit" class=" w-full text-center text-base md:text-xl font-bold text-white bg-tertiary md:w-[19.938rem] h-[3rem]">Anfrage senden</button>

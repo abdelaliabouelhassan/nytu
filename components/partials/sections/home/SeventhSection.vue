@@ -1,16 +1,16 @@
 <template>
     <section class="flex flex-col gap-y-16">
         <div class="w-full main-container relative overflow-visible">
-            <div class=" flex items-center space-x-2 ">
+            <div v-animate class=" flex items-center space-x-2 ">
                 <Star class="w-[0.8125rem] h-[0.8125rem] md:w-[2rem] md:h-[2.125rem] text-primary " />
                 <span class="text-xl md:text-5xl font-bold">Testimonials</span>
                 <Star class="w-[0.8125rem] h-[0.8125rem] md:w-[2rem] md:h-[2.125rem] text-primary" />
             </div>
-            <p class="text-xl md:text-[3.5rem] md:leading-[5rem] max-w-3xl">
+            <p v-animate class="text-xl md:text-[3.5rem] md:leading-[5rem] max-w-3xl">
                 Was unsere Kunden sagen
             </p>
         </div>
-        <BaseCarousel class="relative w-full main-container flex flex-col gap-y-9">
+        <BaseCarousel v-animate class="relative w-full main-container flex flex-col gap-y-9">
             <div class="carousel-container ">
                 <div class="carousel w-full flex">
                     <TestimonialCard v-for="(testimonial,index) in testimonials" :key="index" :testimonial="testimonial" 

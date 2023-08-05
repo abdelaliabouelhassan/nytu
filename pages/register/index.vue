@@ -1,7 +1,7 @@
 <template>
     <div class=" w-full">
         <FirstSection />
-        <SecondSection />
+        <!-- <SecondSection /> -->
     </div> 
 </template>
 
@@ -9,7 +9,7 @@
 
 <script setup>
  import FirstSection from "@/components/partials/sections/register/FirstSection.vue"
- import SecondSection from "@/components/partials/sections/register/SecondSection.vue"
+//  import SecondSection from "@/components/partials/sections/register/SecondSection.vue"
 
 
  useSeoMeta({ // change title and description values to your needs
