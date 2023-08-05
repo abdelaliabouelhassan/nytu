@@ -18,7 +18,7 @@
                 
                 <div v-accordion v-if="item.title === 'Nytu hub'" 
                     :class="{hidden:!showDropDown}"
-                    class="bg-white accordion w-40 flex flex-col divide-y text-black absolute top-11 border border-t-0">
+                    class="bg-white accordion w-40 flex flex-col divide-y text-black absolute top-11 -left-2 border border-t-0">
                     <a :href="item.link+'#tutorials'"  class="w-full py-2 px-4 hover:text-primary">Tutorials</a>
                     <div class="w-full py-2 px-4 accordion-item">
                         <div class="accordion-header flex items-center justify-between hover:text-primary">

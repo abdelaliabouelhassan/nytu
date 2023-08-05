@@ -1,7 +1,7 @@
 <template>
     <section class=" w-full bg-primary py-28">
        <Pricing />
-        <div class=" w-full main-container flex-col flex items-center space-y-10 mt-16">
+        <div v-animate class=" w-full main-container flex-col flex items-center space-y-10 mt-16">
             <p class=" text-white text-base md:text-xl font-normal text-center">
                 Wir supporten Vereine und sponsoren evtl. auch dein Event. 
             </p>

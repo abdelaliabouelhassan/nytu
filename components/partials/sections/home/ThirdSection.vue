@@ -237,7 +237,7 @@
                 </div>
             </div>
 
-            <div v-animate class="w-full main-container mx-auto flex justify-center items-center gap-x-2 md:justify-end md:absolute md:top-0 md:left-1/2 md:-translate-x-1/2">
+            <div class="w-full main-container mx-auto flex justify-center items-center gap-x-2 md:justify-end md:absolute md:top-0 md:left-1/2 md:-translate-x-1/2">
                 <LeftArrow/>
                 <RightArrow/>
             </div>
