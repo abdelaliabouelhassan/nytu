@@ -3,17 +3,17 @@
     <section class="bg-tertiary py-[5.625rem] text-white overflow-hidden">
         <BaseCarousel class="">
             <div class="main-container relative overflow-visible ">
-                <div class=" flex items-center space-x-2 text-primary">
+                <div v-animate class=" flex items-center space-x-2 text-primary">
                     <Star class=" w-[0.8125rem] h-[0.8125rem] md:w-[2rem] md:h-[2.125rem] " />
                     <span class="text-xl md:text-5xl font-bold">Why us</span>
                     <Star class=" w-[0.8125rem] h-[0.8125rem] md:w-[2rem] md:h-[2.125rem]" />
                 </div>
-                <p class="text-xl max-w-[16rem] md:text-[3.5rem]   md:leading-[5rem] md:max-w-3xl">
+                <p v-animate class="text-xl max-w-[16rem] md:text-[3.5rem]   md:leading-[5rem] md:max-w-3xl">
                     We take care of your needs before and after your events
                 </p>
                 
             </div>
-            <div class="relative">
+            <div v-animate class="relative ">
                 <!-- carousel_container -->
                 <div ref="carousel_container" class="carousel-container  flex pt-12 pb-10 md:py-24 " >
                      <!-- carousel -->
@@ -237,7 +237,7 @@
                 </div>
             </div>
 
-            <div class="w-full main-container mx-auto flex justify-center items-center gap-x-2 md:justify-end md:absolute md:top-0 md:left-1/2 md:-translate-x-1/2">
+            <div v-animate class="w-full main-container mx-auto flex justify-center items-center gap-x-2 md:justify-end md:absolute md:top-0 md:left-1/2 md:-translate-x-1/2">
                 <LeftArrow/>
                 <RightArrow/>
             </div>
@@ -302,7 +302,7 @@ onMounted(() => {
     carousel_container.value.addEventListener('scroll',moveBackgroud)
 })
 onUnmounted(() => {
-    window.removeEventListener('resize',setCssValues)
+    window.removeEventListener('resize',setValues)
 
 })
 </script>

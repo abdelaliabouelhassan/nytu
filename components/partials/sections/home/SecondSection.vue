@@ -2,14 +2,14 @@
     <!-- home second section -->
     <section>
         <div class="main-container text-center flex flex-col gap-y-11">
-            <h1 class="text-3xl text-primary font-bold md:text-[5rem] ">Events made easy</h1>
-            <p class="md:text-xl">Schnell, intuitiv und persönlich: Mit nytu gelingt erfolgreiches Event-Management im Handumdrehen. Unsere Plattform bietet Ihnen alle Funktionen, um Ihren Event mühelos zu organisieren und mit Ihren Zielgruppen einfach zu kommunizieren: der Versand von Einladungen, der Verkauf von Tickets und das Scanning-System beim Einlass finden Sie alles bequem an einem Ort. </p>
-            <Video @click="showVideo = true" class="hidden md:flex">
+            <h1 v-animate class="text-3xl text-primary font-bold md:text-[5rem] ">Events made easy</h1>
+            <p v-animate class="md:text-xl">Schnell, intuitiv und persönlich: Mit nytu gelingt erfolgreiches Event-Management im Handumdrehen. Unsere Plattform bietet Ihnen alle Funktionen, um Ihren Event mühelos zu organisieren und mit Ihren Zielgruppen einfach zu kommunizieren: der Versand von Einladungen, der Verkauf von Tickets und das Scanning-System beim Einlass finden Sie alles bequem an einem Ort. </p>
+            <Video v-animate @click="showVideo = true" class="hidden md:flex">
                 <img class="w-full object-contain" src="/images/home/second_section_video.svg" alt="second_section_video">
             </Video>
         </div>
         <!-- companies grid -->
-        <div class="grid grid-cols-3 gap-6 px-4 pt-8 justify-items-center md:hidden">
+        <div v-animate class="grid grid-cols-3 gap-6 px-4 pt-8 justify-items-center md:hidden">
             <div class="shrink-0 flex justify-center items-center px-2 xs:px-4 max-w-[8rem]">
                 <svg class="w-full h-full" width="152" height="50" viewBox="0 0 152 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M20.3115 23.0282V17.7871H37.855C38.0341 18.7118 38.1401 19.8083 38.1401 20.9998C38.1401 24.9288 37.0656 29.7935 33.6007 33.2583C30.2309 36.767 25.9291 38.6383 20.2201 38.6383C9.64653 38.6383 0.757812 30.031 0.757812 19.4574C0.757812 8.88377 9.64653 0.276489 20.2201 0.276489C26.068 0.276489 30.2309 2.56811 33.3668 5.56147L29.6717 9.25657C27.4276 7.15135 24.3867 5.51396 20.2201 5.51396C12.501 5.51396 6.46676 11.7346 6.46676 19.4574C6.46676 27.1802 12.501 33.4008 20.2201 33.4008C25.2274 33.4008 28.0782 31.3906 29.9056 29.5632C31.3932 28.0756 32.3727 25.9448 32.7528 23.0282H20.3115Z" fill="#444444"/>
@@ -61,7 +61,7 @@
             
         </div>
         <!-- companies carousel -->
-        <BaseCarousel class="pt-[4.75rem] hidden md:block">
+        <BaseCarousel v-animate class="pt-[4.75rem] hidden md:block">
             <div class="flex justify-center items-center gap-x-4 px-2 lg:gap-x-4 lg-px-0">
                 <LeftArrow class="left-arrow shrink-0"/>
                 <div class="carousel-container flex overflow-hidden  max-w-[61.5rem] mx-0 py-0" >
@@ -126,7 +126,7 @@
                 <RightArrow class="right-arrow shrink-0"/>
             </div>
         </BaseCarousel>
-        <VideoModal class="hidden md:flex" :show="showVideo" @close="showVideo = false" src="/images/home/second_section_video.svg"/>
+        <VideoModal v-animate class="hidden md:flex" :show="showVideo" @close="showVideo = false" src="/images/home/second_section_video.svg"/>
     </section>
 </template>
 

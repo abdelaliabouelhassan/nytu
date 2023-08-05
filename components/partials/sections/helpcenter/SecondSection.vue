@@ -1,16 +1,16 @@
 <template>
-    <section class=" main-container md:pt-20 md:pb-28 md:space-y-20">
+    <section id="updates" class=" main-container md:pt-20 md:pb-28 md:space-y-20">
         <div class=" w-full  flex-col items-start space-y-4 hidden md:flex">
-            <div class="  items-center space-x-2 flex">
+            <div v-animate class="  items-center space-x-2 flex">
                 <Star class=" w-[2rem] h-[2.125rem] text-primary" />
                 <span class=" text-5xl font-bold text-tertiary">Updates</span>
                 <Star class=" w-[2rem] h-[2.125rem] text-primary" />
             </div>
-            <p class=" text-5xl text-tertiary font-light leading-[5rem]">
+            <p v-animate class=" text-5xl text-tertiary font-light leading-[5rem]">
                 Immer auf dem neuesten Stand
             </p>
         </div>
-        <div v-accordion class="accordion flex flex-col gap-y-5 w-full ">
+        <div v-animate v-accordion class="accordion flex flex-col gap-y-5 w-full ">
                 <div class="accordion-item py-5 md:py-10 border-b-2 border-[#D9D9D9]" v-for="(item,index) in updates" :key="index">
                     <div class="accordion-header  py-2 bg-white text-primary  rounded-md flex items-center justify-between">
                       <div class=" text-3xl md:text-[5rem] font-normal"> {{ item.version }} </div>

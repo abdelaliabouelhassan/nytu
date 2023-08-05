@@ -1,10 +1,10 @@
 <template>
-    <section class=" main-container  md:pt-20 pb-10 md:pb-28 space-y-10 md:space-y-20">
+    <section id="tutorials" class=" main-container  md:pt-20 pb-10 md:pb-28 space-y-10 md:space-y-20">
         
         <div class=" flex flex-col w-full items-start space-y-10">
-            <span class=" text-[1.375rem] md:text-[2.5rem] text-tertiary font-bold">Tutorials</span>
+            <span v-animate class=" text-[1.375rem] md:text-[2.5rem] text-tertiary font-bold">Tutorials</span>
             <div class=" w-full grid grid-cols-2 md:grid-cols-3 gap-8">
-                <div class=" w-full bg-primary flex h-[17.125rem]" v-for=" n in 9" :key="n" >
+                <div v-animate class=" w-full bg-primary flex h-[17.125rem]" v-for=" n in 9" :key="n" >
                     <div class=" m-auto flex flex-col items-center space-y-4">
                         <span class=" text-center text-xl md:text-2xl font-bold text-white max-w-[7.9685rem] md:max-w-[10rem]">Tutorial Lorem Ipsum</span>
                         <svg width="81" height="78" viewBox="0 0 81 78" fill="none" xmlns="http://www.w3.org/2000/svg">

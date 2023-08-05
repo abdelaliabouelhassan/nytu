@@ -34,7 +34,7 @@
             <img :src="plan.eventImg" class=" w-full h-[16.125rem] object-cover" alt="">
         </NuxtLink>
 
-        <NuxtLink to="" class=" w-full h-[3rem] flex border border-primary group-hover:bg-primary   ">
+        <NuxtLink to="" class=" w-full h-[3rem] flex border border-primary group-hover:bg-primary   cursor-pointer  ">
             <span class=" text-primary group-hover:text-white font-bold text-base md:text-xl text-center m-auto">Enterprise buchen</span>
         </NuxtLink>
     </div>

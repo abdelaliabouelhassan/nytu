@@ -4,10 +4,37 @@
         <NuxtLink to="/"  :class="{'text-primary':!open,' text-white':open}" class=" duration-500  max-w-[10rem] hover:bg-primary w-full h-full flex md:text-primary hover:text-white md:border-r border-[#D9D9D9]">
              <Logo class=" m-auto"/>
         </NuxtLink >
-        <div class="  items-center space-x-4 lg:space-x-5 hidden md:flex ">
-            <NuxtLink :to="item.link"  :class="{'text-primary':item.active}"  class="duration-300  text-black text-base font-normal hover:text-primary	 " v-for="(item,index) in headeLinks" :key="index">
-              {{item.title}}
-            </NuxtLink >
+        <div class="  items-center space-x-4 lg:space-x-5 hidden md:flex cursor-pointer">
+            <div v-for="(item,index) in headeLinks" :key="index" :class="{'text-primary':item.active}"
+                class="duration-300  text-black text-base font-normal hover:text-primary relative">
+                <NuxtLink :to="item.link" v-if="item.title !== 'Nytu hub'">{{item.title}}</NuxtLink >
+                
+                <div v-else class="flex items-center gap-x-2" @click="showDropDown=!showDropDown">
+                    {{item.title}}
+                    <svg class="w-4 h-4" width="39" height="21" viewBox="0 0 39 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M36.5869 1.5L19.0869 19L1.58691 1.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                
+                <div v-accordion v-if="item.title === 'Nytu hub'" 
+                    :class="{hidden:!showDropDown}"
+                    class="bg-white accordion w-40 flex flex-col divide-y text-black absolute top-11 border border-t-0">
+                    <a :href="item.link+'#tutorials'"  class="w-full py-2 px-4 hover:text-primary">Tutorials</a>
+                    <div class="w-full py-2 px-4 accordion-item">
+                        <div class="accordion-header flex items-center justify-between hover:text-primary">
+                            <span>Hilfe Center</span>
+                            <svg class="w-3.5 h-3.5 chevron" width="39" height="21" viewBox="0 0 39 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M36.5869 1.5L19.0869 19L1.58691 1.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="accordion-content px-2 text-sm flex flex-col ">
+                            <a :href="item.link+'#faq'" class="py-2 hover:text-primary">FAQ</a>
+                            <a :href="item.link+'#downloads'" class="py-2 hover:text-primary">Downloads</a>
+                        </div>
+                    </div>
+                    <a :href="item.link+'#updates'" class="w-full py-2 px-4 hover:text-primary">Updates</a>
+                </div>
+            </div>
         </div>
        </div>
       <div class=" flex items-center space-x-4 md:space-x-0 ">
@@ -26,6 +53,8 @@
             <X class=" m-auto" v-else/>
         </button>
       </div>
+
+      <!-- mobile -->
         <div class="flex items-center lg:order-2 md:hidden">
                 <aside id="default-sidebar" :class="{'translate-x-0':open,'-translate-x-full rtl:translate-x-full':!open}" class="fixed py-4 bg-primary top-16 left-0 rtl:right-0 z-40 w-full h-screen transition-transform  " aria-label="Sidebar">
                     <div class="h-full  overflow-y-auto px-4  space-y-8    ">
@@ -111,6 +140,7 @@
         },
     ]);
 
+    const showDropDown = ref(false)
 
    const mobileHeadeLinks = ref([
         {

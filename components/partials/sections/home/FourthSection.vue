@@ -3,23 +3,23 @@
     <section class="flex flex-col  gap-y-9 md:gap-y-16">
          
         <div class="w-full main-container relative overflow-visible">
-            <div class=" flex items-center space-x-2 ">
+            <div v-animate class=" flex items-center space-x-2 ">
                 <Star class="  w-[0.8125rem] h-[0.8125rem] md:w-[2rem] md:h-[2.125rem] text-primary" />
                 <span class="text-xl md:text-5xl font-bold">This is us</span>
                 <Star class=" w-[0.8125rem] h-[0.8125rem] md:w-[2rem] md:h-[2.125rem] text-primary" />
             </div>
-            <p class=" text-xl md:text-[3.5rem]  md:leading-[5rem] max-w-3xl">
+            <p v-animate class=" text-xl md:text-[3.5rem]  md:leading-[5rem] max-w-3xl">
                 Treffen Sie unser Team
             </p>
         </div>
         <BaseCarousel class=" flex flex-col gap-y-9 md:gap-y-16">
-            <div class="carousel-container ">
-                <div class="carousel main-container flex  gap-x-8 gap-y-20 ">
+            <div v-animate class="carousel-container main-container">
+                <div class="carousel  flex  gap-x-8 gap-y-20 ">
                     <TeamCard v-for="(person,index) in team" :key="index" :person="person" 
                             class="shrink-0 w-[17.25rem] md:w-[19.2rem] last:pr-4 last:box-content" />
                 </div>
             </div>
-            <div class="w-full main-container flex items-center gap-x-2">
+            <div v-animate class="w-full main-container flex items-center gap-x-2">
                     <button class="w-fit px-12  bg-primary h-12 text-center text-white font-semibold md:text-xl md:order-3">
                         Mehr über uns
                     </button>
