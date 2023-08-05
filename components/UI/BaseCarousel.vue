@@ -71,13 +71,13 @@ function setScrollLimit() {
 
 function highlightArrows(){
 
-    if(carouselContainer.value.scrollLeft === 0){
+    if(carouselContainer.value.scrollLeft> scrollLimit.value-2 ){
         rightArrow.value.classList.remove('highlight')
     }else{
         rightArrow.value.classList.add('highlight')
     }
 
-    if(carouselContainer.value.scrollLeft > scrollLimit.value-2){
+    if(carouselContainer.value.scrollLeft === 0){
         leftArrow.value.classList.remove('highlight')
     }else{
         leftArrow.value.classList.add('highlight')
@@ -98,8 +98,8 @@ onMounted(() => {
     carouselContainer.value.addEventListener('mousemove',onMouseMove)
     carouselContainer.value.addEventListener('mouseup',onMouseUp)
 
-    rightArrow.value.addEventListener('click',moveRight)
-    leftArrow.value.addEventListener('click',moveLeft)
+    leftArrow.value.addEventListener('click',moveRight)
+    rightArrow.value.addEventListener('click',moveLeft)
 
     setScrollLimit()
     window.addEventListener('resize',setScrollLimit)
