@@ -7,7 +7,7 @@
                 <Star class="w-[0.8125rem] h-[0.8125rem] md:w-[2rem] md:h-[2.125rem] text-primary" />
             </div>
             <p v-animate class="text-xl md:text-[3.5rem] md:leading-[5rem] max-w-3xl">
-                Was unsere Kunden sagen
+                Maxime nutzt nytu weil ...
             </p>
         </div>
         <div v-animate class="relative w-full main-container flex flex-col gap-y-9">

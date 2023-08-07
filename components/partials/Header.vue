@@ -1,5 +1,7 @@
 <template>
-    <header :class="{'bg-white border-primary':!open,' bg-primary border-white ':open}" class="  w-full h-[4rem] z-40 md:bg-white border-b  md:border-[#D9D9D9] flex justify-between fixed ">
+
+    <header :class="{'bg-white border-primary':!open,' bg-primary border-white ':open}" class="  w-full h-[4rem] z-[40] md:bg-white border-b  md:border-[#D9D9D9] flex justify-between fixed ">
+      <div class=" w-full h-full top-0 left-0   fixed z-[41]  " v-if="showDropDown" @click="showDropDown = false;"></div>
        <div class=" flex items-center space-x-10 w-full h-full">
         <NuxtLink to="/"  :class="{'text-primary':!open,' text-white':open}" class=" duration-500  max-w-[10rem] hover:bg-primary w-full h-full flex md:text-primary hover:text-white md:border-r border-[#D9D9D9]">
              <Logo class=" m-auto"/>
@@ -18,7 +20,7 @@
                 
                 <div v-accordion v-if="item.title === 'Nytu hub'" 
                     :class="{hidden:!showDropDown}"
-                    class="bg-white accordion w-40 flex flex-col divide-y text-black absolute top-11 -left-2 border border-t-0">
+                    class="bg-white accordion z-50 w-40 flex flex-col divide-y text-black absolute top-11 -left-2 border border-t-0">
                     <a :href="item.link+'#tutorials'"  class="w-full py-2 px-4 hover:text-primary">Tutorials</a>
                     <div class="w-full py-2 px-4 accordion-item">
                         <div class="accordion-header flex items-center justify-between hover:text-primary">
@@ -37,9 +39,10 @@
             </div>
         </div>
        </div>
+
       <div class=" flex items-center space-x-4 md:space-x-0 ">
         <div class=" max-w-[10rem] w-full h-full">
-            <NuxtLink  to="/demo-planen" class=" md:bg-secondary px-0 md:px-4 w-full h-full flex md:border-l md:border-[#D9D9D9] group">
+            <NuxtLink @click="open = false;"  to="/demo-planen" class=" md:bg-secondary px-0 md:px-4 w-full h-full flex md:border-l md:border-[#D9D9D9] group">
             <div :class="{'text-primary':!open,' text-white':open}" class="  flex items-center m-auto space-x-2 md:group-hover:text-white  md:text-[#1C0544] duration-300 ">
                     <svg width="9" height="13" viewBox="0 0 9 13" fill="none" class=" fill-current" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9 6.5L0.75 12.1292L0.750001 0.870834L9 6.5Z" />
@@ -55,13 +58,44 @@
       </div>
 
       <!-- mobile -->
-        <div class="flex items-center lg:order-2 md:hidden">
+        <div class="flex items-center lg:order-2 md:hidden z-50 ">
                 <aside id="default-sidebar" :class="{'translate-x-0':open,'-translate-x-full rtl:translate-x-full':!open}" class="fixed py-4 bg-primary top-16 left-0 rtl:right-0 z-40 w-full h-screen transition-transform  " aria-label="Sidebar">
-                    <div class="h-full  overflow-y-auto px-4  space-y-8    ">
-                         <div class="  items-start flex-col space-y-4 lg:space-x-5  flex ">
-                            <NuxtLink :to="item.link"  @click="open = false;" :class="{'text-black':item.active}"  class="duration-300  text-white font-bold text-lg  hover:text-black	 " v-for="(item,index) in mobileHeadeLinks" :key="index">
-                            {{item.title}}
+                    <div class="h-full  overflow-y-auto px-4  space-y-8 z-50    ">
+                         <div class="  items-start flex-col space-y-4 lg:space-x-5  flex w-full ">
+                           <div class=" w-full flex" v-for="(item,index) in mobileHeadeLinks" :key="index">
+                             <NuxtLink v-if="item.title !== 'Nytu hub'" :to="item.link"  @click="open = false;" :class="{'text-black':item.active}"  class="duration-300 w-full  text-white font-bold text-lg  hover:text-black	 " >
+                                 {{item.title}}
                             </NuxtLink >
+
+                           <div class=" w-full relative z-50">
+                              <div v-if="item.title === 'Nytu hub'" :class="{'text-black':item.active}" class="z-50  flex items-center gap-x-2 duration-300 w-full  text-white font-bold text-lg  hover:text-black" @click="showDropDown=!showDropDown">
+                                    {{item.title}}
+                                    <svg class="w-4 h-4" width="39" height="21" viewBox="0 0 39 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M36.5869 1.5L19.0869 19L1.58691 1.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                            </div>
+                
+                            <div v-accordion v-if="item.title === 'Nytu hub'" 
+                                :class="{hidden:!showDropDown}" @click="open = false;showDropDown = false;"
+                                class="bg-white accordion z-50 w-40 flex flex-col divide-y text-black  absolute top-8 -left-2 border border-t-0">
+                                <a :href="item.link+'#tutorials'"  class="z-50  w-full py-2 px-4 hover:text-primary">Tutorials</a>
+                                <div class="w-full py-2 px-4 accordion-item z-50 ">
+                                    <div class="z-50 accordion-header flex items-center justify-between hover:text-primary">
+                                        <span>Hilfe Center</span>
+                                        <svg class="w-3.5 h-3.5 chevron" width="39" height="21" viewBox="0 0 39 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M36.5869 1.5L19.0869 19L1.58691 1.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="accordion-content px-2 text-sm flex flex-col ">
+                                        <a :href="item.link+'#faq'" class="py-2 hover:text-primary">FAQ</a>
+                                        <a :href="item.link+'#downloads'" class="py-2 hover:text-primary">Downloads</a>
+                                    </div>
+                                </div>
+                                <a :href="item.link+'#updates'" class="w-full py-2 px-4 hover:text-primary">Updates</a>
+                            </div>
+                           </div>
+                           </div>
+                            
                          </div>
                          <div class=" flex space-x-5 items-center">
                             <a href="" target="_blank">
@@ -100,8 +134,12 @@
                          </div>
                     </div>
                 </aside>
+                
          </div>
+
     </header>
+
+
 </template>
 
 
@@ -119,12 +157,12 @@
             active:false,
         },
         {
-            title:'This is Us',
+            title:'Über uns',
             link:'/about-us',
             active:false,
         },
         {
-            title:'Pricing',
+            title:'Kosten',
             link:'/pricing',
             active:false,
         },
@@ -149,23 +187,18 @@
             active:false,
         },
         {
-            title:'This is Us',
+            title:'Über uns',
             link:'/about-us',
             active:false,
         },
         {
-            title:'Pricing',
+            title:'Kosten',
             link:'/pricing',
             active:false,
         },
         {
             title:'Referenzen',
             link:'/references',
-            active:false,
-        },
-        {
-            title:'Hilfe-Center',
-            link:'/help-center',
             active:false,
         },
          {
@@ -176,6 +209,11 @@
          {
             title:'Kontakt',
             link:'/contact',
+            active:false,
+        },
+         {
+            title:'Nytu hub',
+            link:'/help-center',
             active:false,
         },
     ]);

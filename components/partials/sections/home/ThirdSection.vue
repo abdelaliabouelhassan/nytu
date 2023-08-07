@@ -208,7 +208,7 @@
                             </div>
 
                             <!-- feature -->
-                            <div class="flex flex-col items-center gap-8 group w-fit text-center cursor-default md:flex-row md:text-start ml-auto" >
+                            <div class="flex flex-col items-center gap-8 group w-fit text-center cursor-default md:flex-row md:text-start ml-auto pr-10" >
                                 <!-- feature image -->
                                 <div class="w-[10.625rem] h-[10.625rem] rounded-full  overflow-hidden relative">
                                     <img class="w-full h-full object-contain" src="/images/home/crm_in_and_out.svg" alt="crm_in_and_out">

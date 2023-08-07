@@ -18,9 +18,11 @@
                 </div>
             </div>
             <div v-animate class="w-full main-container flex items-center gap-x-2">
-                    <button class="w-fit px-12  bg-primary h-12 text-center text-white font-semibold md:text-xl md:order-3">
-                        Alle Events
-                    </button>
+                   <NuxtLink to="/references" class="md:order-3">
+                        <button class="w-fit px-12  bg-primary h-12 text-center text-white font-semibold md:text-xl ">
+                            Alle Events
+                        </button>
+                    </NuxtLink>
                     <LeftArrow  class="md:order-1"/>
                     <RightArrow  class="md:order-2"/>
             </div>

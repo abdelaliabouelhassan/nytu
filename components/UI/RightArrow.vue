@@ -1,5 +1,5 @@
 <template>
-    <button class="right-arrow w-12 h-12 flex items-center justify-center text-2xl border border-[#D9D9D9] text-[#D9D9D9] 
+    <button class="right-arrow w-12 h-12 flex items-center justify-center text-2xl border border-opacity-30 text-primary border-primary  text-opacity-30 
                 hover:text-white hover:bg-primary highlight transition-all duration-150 ease-linear">
         <!-- <span>&#8594</span> -->
         <svg class="w-4 h-5"  width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
