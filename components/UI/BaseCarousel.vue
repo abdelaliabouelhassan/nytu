@@ -14,6 +14,14 @@
 
 <script setup>
 
+const props = defineProps({
+    widthScroll:{
+        type:Boolean,
+        required:false,
+        default:false
+    }
+})
+
 const mousePosition=ref(0)
 const scrollOrigin=ref(0)
 const scrollDelta=ref(0)
@@ -21,13 +29,18 @@ const offset=ref(0)
 const allowScroll=ref(false)
 const scrollLimit=ref(0)
 
+const ArrowScrollOffset = ref(0)
+const scrollDistance = ref(0)
+const carouselMargin = ref(0)
+const lastScrollDistance = ref(null)
+
 const carouselParent = ref(null)
 const carouselContainer = ref(null)
 const carousel = ref(null)
 const rightArrow = ref(null)
 const leftArrow = ref(null)
 
-const offsetInPixel = computed(()=> `${offset.value}px`)
+// const offsetInPixel = computed(()=> `${offset.value}px`)
 
 function onMouseDown(e){
     scrollOrigin.value = carouselContainer.value.scrollLeft
@@ -49,24 +62,74 @@ function onMouseUp(e){
     }
 }
 
-function moveRight() {
+function moveRight(event) {
+    if(event.target.closest('highlight')){
+        console.log('highlighted');
+    }
+    let leftScroll = carouselContainer.value.scrollLeft - ArrowScrollOffset.value
+
+    if(props.widthScroll && leftScroll < carouselMargin.value){
+        leftScroll -= carouselMargin.value
+    }
+    // else if(!props.widthScroll && leftScroll < 10){
+    //     leftScroll -= 20
+    // }
+    else if(!props.widthScroll && lastScrollDistance.value){
+        leftScroll = lastScrollDistance.value
+        lastScrollDistance.value = null
+    }
+    
+    
     carouselContainer.value.scroll({
-        left: carouselContainer.value.scrollLeft - carouselContainer.value.offsetWidth,
+        left: leftScroll,
         behavior: 'smooth' // 'auto' for instant scroll, 'smooth' for smooth scroll (optional)
     });
+   
 
 }
 function moveLeft() {
+    console.log('moveLeft');
+    let leftScroll = carouselContainer.value.scrollLeft + ArrowScrollOffset.value
+    
+    if(props.widthScroll && leftScroll > scrollDistance.value-carouselMargin.value){
+        leftScroll += carouselMargin.value
+    }
+    // else if(!props.widthScroll && leftScroll > scrollDistance.value-10){
+    //     leftScroll += 20
+    // }
+    else if(!props.widthScroll && leftScroll > scrollDistance.value-10){
+       lastScrollDistance.value = carouselContainer.value.scrollLeft
+    }
+    
+
+    console.log('leftScroll',leftScroll);
+    console.log('scrollDistance - 300',scrollDistance.value - 300);
+    console.log('scrollDistance',scrollDistance.value);
+    console.log('lastScrollDistance',lastScrollDistance.value);
+
     carouselContainer.value.scroll({
-        left: carouselContainer.value.scrollLeft + carouselContainer.value.offsetWidth,
+        left: leftScroll,
         behavior: 'smooth' // 'auto' for instant scroll, 'smooth' for smooth scroll (optional)
     });
+  
+
 }
 
 
 
-function setScrollLimit() {
+function setValues() {
     scrollLimit.value =   carouselContainer.value.scrollWidth - carouselContainer.value.offsetWidth
+    if(props.widthScroll){
+        ArrowScrollOffset.value = carouselContainer.value.offsetWidth
+    }else{
+        let columnGap = parseInt( window.getComputedStyle(carousel.value).getPropertyValue('column-gap'))
+        if(!columnGap){
+            columnGap = 0
+        }
+        ArrowScrollOffset.value = carousel.value.children[0].offsetWidth + columnGap 
+    }
+    scrollDistance.value = carouselContainer.value.scrollWidth-carouselContainer.value.offsetWidth
+    carouselMargin.value = parseInt( window.getComputedStyle(carousel.value).getPropertyValue('margin-right') )
 }
 
 function highlightArrows(){
@@ -101,9 +164,12 @@ onMounted(() => {
     leftArrow.value.addEventListener('click',moveRight)
     rightArrow.value.addEventListener('click',moveLeft)
 
-    setScrollLimit()
-    window.addEventListener('resize',setScrollLimit)
-
+    setValues()
+    setTimeout(() => {
+        
+        setValues()
+    }, 2000);
+    window.addEventListener('resize',setValues)
     highlightArrows()
     carouselContainer.value.addEventListener('scroll',highlightArrows)
 
@@ -116,7 +182,7 @@ onUnmounted(() => {
     rightArrow.value.removeEventListener('click',moveRight)
     leftArrow.value.removeEventListener('click',moveLeft)
 
-    window.removeEventListener('resize',setScrollLimit)
+    window.removeEventListener('resize',setValues)
 })
 
 

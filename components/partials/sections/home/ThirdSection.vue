@@ -1,7 +1,7 @@
 <template>
     <!-- home third section -->
     <section class="bg-tertiary py-[5.625rem] text-white overflow-hidden">
-        <BaseCarousel class="">
+        <BaseCarousel widthScroll>
             <div class="main-container relative overflow-visible ">
                 <div v-animate class=" flex items-center space-x-2 text-primary">
                     <Star class=" w-[0.8125rem] h-[0.8125rem] md:w-[2rem] md:h-[2.125rem] " />
@@ -15,7 +15,7 @@
             </div>
             <div v-animate class="relative ">
                 <!-- carousel_container -->
-                <div ref="carousel_container" class="carousel-container  flex pt-12 pb-10 md:py-24 " >
+                <div ref="carousel_container" class="carousel-container overflow-x-auto  flex pt-12 pb-10 md:py-24 " >
                      <!-- carousel -->
                     <div class="carousel main-container flex z-10 " ref="carousel">
                         <!-- carousel-item 1 -->
@@ -230,7 +230,7 @@
                     <!-- moving background images -->
                     <div ref="movingBackground" class="z-0 absolute left-0 top-12 overflow-hidden pl-4 md:pl-0 md:top-1/2 md:-translate-y-1/2 flex ">
                         <div class="w-[67.3125rem] md:w-[143.75rem] shrink-0">
-                            <img src="/images/eventsmadeeasy_primary.svg" class="w-full object-contain pointer-events-none">
+                            <img draggable="false" src="/images/eventsmadeeasy_primary.svg" class="w-full object-contain pointer-events-none">
                         </div>
                     </div>
 
@@ -252,7 +252,7 @@
 <script setup>
 import VideoModal from '@/components/UI/VideoModal.vue'
 
-import BaseCarousel from '@/components/UI/BaseCarousel.vue'
+import BaseCarousel from '~/components/UI/BaseCarousel.vue'
 import RightArrow from '@/components/UI/RightArrow.vue'
 import LeftArrow from '@/components/UI/LeftArrow.vue'
 import Star from "@/components/UI/Icons/Star.vue"
@@ -296,10 +296,23 @@ function moveBackgroud() {
 
 }
 
+function carouselScroll() {
+    let scrollDistance = carousel_container.value.scrollWidth-carousel_container.value.offsetWidth
+    // if(carousel_container.value.scrollLeft+ carousel_container.value.offsetWidth > scrollDistance-150){
+    //     carousel_container.value.scroll({
+    //     left: carousel_container.value.scrollLeft + carousel_container.value.offsetWidth,
+    //         behavior: 'smooth' // 'auto' for instant scroll, 'smooth' for smooth scroll (optional)
+    //     });
+    // }
+        
+    console.log ,
+   moveBackgroud()
+}
+
 onMounted(() => {
     setValues()
     window.addEventListener('resize',setValues)
-    carousel_container.value.addEventListener('scroll',moveBackgroud)
+    carousel_container.value.addEventListener('scroll',carouselScroll)
 })
 onUnmounted(() => {
     window.removeEventListener('resize',setValues)

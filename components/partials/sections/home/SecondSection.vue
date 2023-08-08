@@ -64,7 +64,7 @@
         <BaseCarousel v-animate class="pt-[4.75rem] hidden md:block">
             <div class="flex justify-center items-center gap-x-4 px-2 lg:gap-x-4 lg-px-0">
                 <LeftArrow class="left-arrow shrink-0"/>
-                <div class="carousel-container flex overflow-hidden  max-w-[61.5rem] mx-0 py-0" >
+                <div class="carousel-container w-full flex   max-w-[61.5rem] mx-0 py-0" >
                     <div class="carousel w-full flex items-center flex-nowrap ">
 
                         <div class="shrink-0 flex justify-center items-center w-1/4 px-5 lg:w-1/5 h-20 lg:px-2">

@@ -13,8 +13,8 @@
             </p>
         </div>
         <BaseCarousel class="flex flex-col gap-y-9 md:gap-y-16">
-            <div v-animate class="carousel-container  main-container">
-                <div class="carousel flex  gap-x-8 gap-y-20">
+            <div v-animate class="carousel-container w-full main-container">
+                <div class="carousel flex  gap-x-[30px] gap-y-20">
                     <div v-for="event in events" :key="event.id"  class="last:pr-4 last:box-content">
                         <EventCard  :event="event"
                             class="shrink-0 w-[17.25rem] md:w-[19.2rem] " />
@@ -40,7 +40,7 @@ import EventCard from "@/components/UI/EventCard.vue"
 import Star from "@/components/UI/Icons/Star.vue"
 import RightArrow from '@/components/UI/RightArrow.vue'
 import LeftArrow from '@/components/UI/LeftArrow.vue'
-import BaseCarousel from '@/components/UI/BaseCarousel.vue'
+import BaseCarousel from '~/components/UI/BaseCarousel.vue'
 
  const events = ref([
     {
