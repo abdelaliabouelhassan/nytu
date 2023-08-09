@@ -24,7 +24,7 @@
                             <span class=" text-black text-base md:text-xl font-normal group-hover:text-white">Wir supporten Vereine und sponsoren evtl. auch dein Event. </span>
                         </div>
                     </div>
-                    <NuxtLink to="" class=" w-full max-w-[23.75rem] mx-auto h-[3rem] flex border border-primary group-hover:bg-primary cursor-pointer ">
+                    <NuxtLink to="/contact" class=" w-full max-w-[23.75rem] mx-auto h-[3rem] flex border border-primary group-hover:bg-primary cursor-pointer ">
                         <span class=" text-primary group-hover:text-white font-bold text-base md:text-xl text-center m-auto">Sponsoring anfragen</span>
                     </NuxtLink>
                 </div>

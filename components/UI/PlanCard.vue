@@ -34,7 +34,7 @@
             <img :src="plan.eventImg" class=" w-full object-cover" alt="">
         </NuxtLink>
 
-        <NuxtLink to="" class=" w-full h-[3rem] flex border border-primary group-hover:bg-primary   cursor-pointer  ">
+        <NuxtLink to="/contact" class=" w-full h-[3rem] flex border border-primary group-hover:bg-primary   cursor-pointer  ">
             <span class=" text-primary group-hover:text-white font-bold text-base md:text-xl text-center m-auto">{{ plan.name }} anfragen</span>
         </NuxtLink>
     </div>

@@ -8,11 +8,11 @@
     @apply  max-w-[61.5rem] mx-auto px-4 ;
 }
 
-.accordion .accordion-content {
+.accordion  .accordion-item .accordion-content {
     overflow: hidden;
     height: 0;
     transition: height 0.3s ease;
-  }
+}
   
 .accordion .accordion-item .accordion-header{
   cursor: pointer;
