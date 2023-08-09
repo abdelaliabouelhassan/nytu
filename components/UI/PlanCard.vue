@@ -1,5 +1,5 @@
 <template>
-    <div class="h-full w-full bg-white hover:bg-tertiary group p-5  md:p-10 space-y-6 duration-300">
+    <div class="h-full w-full  bg-white hover:bg-tertiary group p-5  md:p-10 space-y-6 duration-300">
         <div class=" w-full flex flex-col items-start space-y-4 border-b border-[#D9D9D9] pb-5">
              <div class=" flex items-center space-x-2">
                 <Star class=" w-[0.95806rem] h-[0.95806rem] md:w-[1.375rem] md:h-[1.375rem] text-primary" />
@@ -20,7 +20,7 @@
                 <p>{{item}}</p>
             </div>
         </div>
-        <NuxtLink :to="'/references-details/' + plan.id" class=" w-full h-[16.125rem] relative">
+        <NuxtLink :to="'/references-details/' + plan.id" class=" w-full max-h-[16.125rem] relative">
             <DateTicket  :datetext="plan.eventDate" class=" absolute top-0 right-0 text-sm"/>
             <div class=" flex flex-col items-start space-y-2 absolute left-5 bottom-6">
                 <h1 class=" text-white font-bold text-[1.375rem]">{{ plan.eventTitle }}</h1>
@@ -31,11 +31,11 @@
                 </svg>
                </div>
             </div>
-            <img :src="plan.eventImg" class=" w-full h-[16.125rem] object-cover" alt="">
+            <img :src="plan.eventImg" class=" w-full object-cover" alt="">
         </NuxtLink>
 
         <NuxtLink to="" class=" w-full h-[3rem] flex border border-primary group-hover:bg-primary   cursor-pointer  ">
-            <span class=" text-primary group-hover:text-white font-bold text-base md:text-xl text-center m-auto">Enterprise buchen</span>
+            <span class=" text-primary group-hover:text-white font-bold text-base md:text-xl text-center m-auto">{{ plan.name }} anfragen</span>
         </NuxtLink>
     </div>
 </template>

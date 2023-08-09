@@ -12,34 +12,49 @@
                 Treffen Sie unser Team
             </p>
         </div>
-        <BaseCarousel class=" flex flex-col gap-y-9 md:gap-y-16">
-            <div v-animate class="carousel-container w-full main-container">
-                <!-- carousel flex  gap-x-[30px] -->
-                <div class="carousel w-full grid grid-flow-col flex-nowrap  gap-x-[28px]">
-                    <TeamCard v-for="(person,index) in team" :key="index" :person="person" 
-                            class="shrink-0 w-[17.25rem] md:w-[19.2rem] last:pr-4 last:box-content col-span-4" />
+        <Splide v-animate :has-track="false" :options="options"  class="flex flex-col gap-y-9 md:gap-y-16">
+            <div  class="slide-wrapper main-container">
+                <div class="splide__track">
+                        <ul class="splide__list">
+                            <li v-for="(person,index) in team" :key="index" class="splide__slide w-fit last:pr-4">
+                                <TeamCard  :person="person" 
+                                    class="shrink-0 w-[17.25rem] md:w-[19.2rem]  last:box-content" />
+                            </li>
+
+                        </ul>
+                
                 </div>
             </div>
-            <div v-animate class="w-full main-container flex items-center gap-x-2">
-                <NuxtLink  to="/about-us" class="md:order-3">
+            
+            <div class="w-full main-container flex items-center gap-x-2">
+                    <NuxtLink  to="/about-us" class="md:order-3">
                         <button class="w-fit px-12  bg-primary h-12 text-center text-white font-semibold md:text-xl">
                            Mehr über uns
                         </button>
                     </NuxtLink>
-                    <LeftArrow class="md:order-1"/>
-                    <RightArrow class="md:order-2"/>
+                    <SplideArrows />
             </div>
-        </BaseCarousel>
+        </Splide>
     </section>
 </template>
 
 <script setup>
  import TeamCard from "@/components/UI/TeamCard.vue"
 import Star from "@/components/UI/Icons/Star.vue"
-import RightArrow from '@/components/UI/RightArrow.vue'
-import LeftArrow from '@/components/UI/LeftArrow.vue'
-import BaseCarousel from '~/components/UI/BaseCarousel.vue'
 
+import { Splide } from '@splidejs/vue-splide';
+import SplideArrows from '~/components/UI/SplideArrows.vue'
+
+const options = reactive({
+    rewind:false,
+    perMove: 1,
+    arrows:true,
+    pagination: false,
+    drag:true,
+    autoWidth:true,
+    gap:'30px',
+    trimSpace: false,
+})
  const team = ref([
     {
         id:1,

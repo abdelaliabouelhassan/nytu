@@ -22,9 +22,7 @@
 <script setup>
  import TestimonialCard from "@/components/UI/TestimonialCard.vue"
 import Star from "@/components/UI/Icons/Star.vue"
-import RightArrow from '@/components/UI/RightArrow.vue'
-import LeftArrow from '@/components/UI/LeftArrow.vue'
-import BaseCarousel from '@/components/UI/BaseCarousel.vue'
+
 
 const testimonial = ref(
     {

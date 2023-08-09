@@ -22,6 +22,7 @@ import FifthSection from '~/components/partials/sections/home/FifthSection.vue'
 import SixthSection from '~/components/partials/sections/home/SixthSection.vue'
 import SeventhSection from '~/components/partials/sections/home/SeventhSection.vue'
 import EightSection from '~/components/partials/sections/home/EightSection.vue'
+import '@splidejs/vue-splide/css';
 
 
  useSeoMeta({ // change title and description values to your needs

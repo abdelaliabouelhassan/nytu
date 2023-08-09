@@ -62,7 +62,6 @@
                     </NuxtLink >
                 </div>
                 <div  class=" flex flex-col items-start space-y-4">
-                    <span class=" text-white text-base font-normal">Social Media</span>
                    
                     <a href="" target="_blank">
                         <svg width="33" height="35" viewBox="0 0 33 35" fill="none" xmlns="http://www.w3.org/2000/svg">
