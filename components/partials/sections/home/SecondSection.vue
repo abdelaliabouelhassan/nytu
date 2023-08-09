@@ -144,7 +144,7 @@ const options = reactive({
     perMove: 1,
     arrows:true,
     pagination: false,
-    drag:true,
+    drag:'free',
     perPage: 5,
     gap:0,
     trimSpace: false,

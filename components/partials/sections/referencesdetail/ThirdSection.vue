@@ -42,7 +42,7 @@ const options = reactive({
     perMove: 1,
     arrows:true,
     pagination: false,
-    drag:true,
+    drag:'free',
     autoWidth:true,
     gap:'30px',
     trimSpace: false,
