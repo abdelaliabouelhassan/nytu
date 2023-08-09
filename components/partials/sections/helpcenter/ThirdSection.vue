@@ -1,5 +1,5 @@
 <template>
-    <section class=" main-container pt-20 pb-10 md:pb-28 space-y-10 md:space-y-20">
+    <section  class=" main-container pt-20 pb-10 md:pb-28 space-y-10 md:space-y-20">
         <div id="hilf-center" class=" w-full flex flex-col items-start space-y-4">
             <div v-animate class=" flex items-center space-x-2">
                 <Star class="  w-[0.8125rem] h-[0.8125rem] md:w-[2rem] md:h-[2.125rem] text-primary" />

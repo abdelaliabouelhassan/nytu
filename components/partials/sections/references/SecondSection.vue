@@ -1,7 +1,7 @@
 <template>
     <section class=" w-full main-container  pt-10 pb-28">
-        <div class=" w-full grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-20">
-            <EventCard v-animate v-for="(event,index) in displayedEvents" :key="index" :event="event" />
+        <div v-animate class=" w-full grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-20">
+            <EventCard   v-for="(event,index) in displayedEvents" :key="index" :event="event" />
             <!-- <EventCard v-for="(event,index) in events" :key="index" :event="event" />
             <EventCard v-for="(event,index) in events" :key="index" :event="event" /> -->
         </div>

@@ -18,11 +18,17 @@ export default defineNuxtPlugin((nuxtApp) => {
                 item.classList.toggle('active');
 
                 if (item.classList.contains('active')) {
-                content.style.height = content.scrollHeight + 'px';
-                chevron.classList.add('rotate-0')
+                  content.style.height = content.scrollHeight + 'px';
+                  setTimeout(() => {
+                    content.style.height = 'auto';
+                  }, 300);
+                  chevron.classList.add('rotate-0')
                 } else {
-                content.style.height = 0;
-                chevron.classList.remove('rotate-0')
+                  content.style.height = content.scrollHeight + 'px';
+                  setTimeout(() => {
+                    content.style.height = 0;
+                  }, 100);
+                  chevron.classList.remove('rotate-0')
 
                 }
             });

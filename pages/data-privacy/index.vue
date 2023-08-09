@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full">
+  <section   class="w-full">
     <div class="bg-gray-50" style="flex: 1 0 auto">
       <div class="relative bg-gray-50 z-0">
         <div class="w-full bg-gray-150">

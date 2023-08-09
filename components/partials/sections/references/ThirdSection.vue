@@ -10,27 +10,44 @@
                 Was unsere Kunden sagen
             </p>
         </div>
-        <BaseCarousel v-animate class="relative w-full main-container flex flex-col gap-y-9">
-            <div class="carousel-container ">
-                <div class="carousel w-full flex">
-                    <TestimonialCard v-for="(testimonial,index) in testimonials" :key="index" :testimonial="testimonial" 
+        <Splide v-animate :has-track="false" :options="options" class="main-container flex flex-col gap-y-9 relative">
+            <div  class="slide-wrapper main-container">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li v-for="(testimonial,index) in testimonials" :key="index" class="splide__slide">
+                            <TestimonialCard  :testimonial="testimonial" 
                             class="shrink-0 w-full" />
+                        </li>
+                    </ul>               
                 </div>
             </div>
-            <div class="w-full justify-end md:absolute md:bottom-0 md:right-0 flex items-center gap-x-2">
-                <LeftArrow class="bg-white"/>
-                <RightArrow class="bg-white"/>
-            </div>
-        </BaseCarousel>
+
+            <SplideArrows class="w-fit self-end md:absolute md:bottom-0 md:right-8"/>
+        </Splide>
     </section>
 </template>
 
 <script setup>
- import TestimonialCard from "@/components/UI/TestimonialCard.vue"
+import TestimonialCard from "@/components/UI/TestimonialCard.vue"
 import Star from "@/components/UI/Icons/Star.vue"
-import RightArrow from '@/components/UI/RightArrow.vue'
-import LeftArrow from '@/components/UI/LeftArrow.vue'
-import BaseCarousel from '@/components/UI/BaseCarousel.vue'
+import { Splide } from '@splidejs/vue-splide';
+import SplideArrows from '~/components/UI/SplideArrows.vue'
+import '@splidejs/vue-splide/css';
+
+
+
+const options = reactive({
+    rewind:false,
+    perMove: 1,
+    arrows:true,
+    pagination: false,
+    drag:true,
+    perPage: 1,
+    gap:0,
+    speed:700,
+    
+
+})
 
 const testimonials = ref([
     {

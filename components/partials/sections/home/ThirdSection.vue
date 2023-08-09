@@ -1,7 +1,7 @@
 <template>
     <!-- home third section -->
     <section class="bg-tertiary py-[5.625rem] text-white overflow-hidden">
-        <BaseCarousel class="">
+        <CostumeSlider>
             <div class="main-container relative overflow-visible ">
                 <div v-animate class=" flex items-center space-x-2 text-primary">
                     <Star class=" w-[0.8125rem] h-[0.8125rem] md:w-[2rem] md:h-[2.125rem] " />
@@ -11,14 +11,20 @@
                 <p v-animate class="text-xl max-w-[16rem] md:text-[3.5rem]   md:leading-[5rem] md:max-w-3xl">
                     We take care of your needs before and after your events
                 </p>
-                
+
             </div>
             <div v-animate class="relative ">
-                <!-- carousel_container -->
-                <div ref="carousel_container" class="carousel-container  flex pt-12 pb-10 md:py-24 " >
-                     <!-- carousel -->
-                    <div class="carousel main-container flex z-10 " ref="carousel">
-                        <!-- carousel-item 1 -->
+                <!-- moving background images -->
+                <div ref="movingBackground" class="z-0 absolute left-0 top-12 overflow-hidden pl-4 md:pl-0 md:top-1/2 md:-translate-y-1/2 flex ">
+                    <div class="w-[67.3125rem] md:w-[143.75rem] shrink-0">
+                        <img draggable="false" src="/images/eventsmadeeasy_primary.svg" class="w-full object-contain pointer-events-none">
+                    </div>
+                </div>
+                <!-- slider_container -->
+                <div ref="slider_container" class="slider-container overflow-x-auto  flex pt-12 pb-10 md:py-24 z-10 relative" >
+                     <!-- slider -->
+                    <div class="slider main-container flex z-10 " ref="slider">
+                        <!-- slider-item 1 -->
                         <div class="z-10 shrink-0 flex md:flex-col gap-x-12 mr-12 mt-28 md:mt-0 md:gap-y-[5.625rem] md:w-[60rem] md:mr-[10.25rem]">
                             <!-- feature -->
                             <div class="flex flex-col items-center gap-8 group w-fit text-center cursor-default md:flex-row md:text-start">
@@ -63,10 +69,10 @@
                                     <div >Analog & Digital mit Partner & Experten</div>
                                 </div>
                             </div>
-                            
+
                         </div>
 
-                        <!-- carousel-item 2 Ticket-->
+                        <!-- slider-item 2 Ticket-->
                         <div class="z-10 shrink-0  text-black group mt-10 mr-12 md:mt-8 md:mr-[19.75rem] ">
                             <div class="bg-secondary flex flex-col gap-y-4 px-8 py-10 font-bold w-[22rem]  md:w-[27rem] rounded-[2rem] relative">
                                 <div class="absolute top-0 right-0 ">
@@ -102,10 +108,10 @@
                                     <p> Eintrittskontrolle: Integrieren Sie einen QR-Code in Ihrem Design für den Check-in.</p>
                                 </div>
                             </div>
-                            
+
                         </div>
 
-                        <!-- carousel-item 3 -->
+                        <!-- slider-item 3 -->
                         <div class="z-10 shrink-0 flex md:flex-col gap-x-12 mr-12 mt-28 md:mt-0 md:gap-y-[5.625rem] md:w-[60rem] md:mr-[36.875rem]">
                             <!-- feature -->
                             <div class="flex flex-col items-center gap-8 group w-fit text-center cursor-default md:flex-row md:text-start md:order-2">
@@ -155,7 +161,7 @@
 
                         </div>
 
-                        <!-- carousel-item 4 -->
+                        <!-- slider-item 4 -->
                         <div class="z-10 shrink-0 flex md:flex-col mr-12 mt-28 md:mt-0 md:mr-8">
                             <!-- feature -->
                             <div class="w-full  flex flex-col text-center items-center gap-8 group cursor-default md:flex-row md:mt-auto md:text-start">
@@ -189,7 +195,7 @@
                             </div>
                         </div>
 
-                        <!-- carousel-item 5 -->
+                        <!-- slider-item 5 -->
                         <div class="z-10 shrink-0 flex md:flex-col gap-x-12 mr-12 mt-28 md:mt-0 md:gap-y-[5.625rem] md:w-[62rem] box-content" ref="last_carousel_item">
                             <!-- feature -->
                             <div class="flex flex-col items-center gap-8 group w-fit text-center cursor-default md:flex-row md:text-start">
@@ -208,7 +214,7 @@
                             </div>
 
                             <!-- feature -->
-                            <div class="flex flex-col items-center gap-8 group w-fit text-center cursor-default md:flex-row md:text-start ml-auto" >
+                            <div class="flex flex-col items-center gap-8 group w-fit text-center cursor-default md:flex-row md:text-start ml-auto pr-10" >
                                 <!-- feature image -->
                                 <div class="w-[10.625rem] h-[10.625rem] rounded-full  overflow-hidden relative">
                                     <img class="w-full h-full object-contain" src="/images/home/crm_in_and_out.svg" alt="crm_in_and_out">
@@ -224,26 +230,30 @@
                             </div>
                         </div>
 
-                        
-                    </div>
 
-                    <!-- moving background images -->
-                    <div ref="movingBackground" class="z-0 absolute left-0 top-12 overflow-hidden pl-4 md:pl-0 md:top-1/2 md:-translate-y-1/2 flex ">
-                        <div class="w-[67.3125rem] md:w-[143.75rem] shrink-0">
-                            <img src="/images/eventsmadeeasy_primary.svg" class="w-full object-contain pointer-events-none">
-                        </div>
                     </div>
-
                 </div>
+               
             </div>
 
-            <div class="w-full main-container mx-auto flex justify-center items-center gap-x-2 md:justify-end md:absolute md:top-0 md:left-1/2 md:-translate-x-1/2">
-                <LeftArrow/>
-                <RightArrow/>
+            <div  class="w-full main-container mx-auto flex justify-center items-center gap-x-2 md:justify-end md:absolute md:top-0 md:left-1/2 md:-translate-x-1/2">
+                <!-- left arrow -->
+                <button class="left-arrow  w-12 h-12 flex items-center justify-center text-2xl border border-opacity-30 text-primary border-primary  text-opacity-30
+                            hover:text-white hover:bg-primary highlight transition-all duration-150 ease-linear hover:border-primary">
+                    <svg class="w-4 h-5" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="currentColor" d="M0.369102 3.95406C0.173841 4.14933 0.173841 4.46591 0.369103 4.66117L3.55108 7.84315C3.74635 8.03841 4.06293 8.03841 4.25819 7.84315C4.45345 7.64789 4.45345 7.33131 4.25819 7.13605L1.42976 4.30762L4.25819 1.47919C4.45345 1.28393 4.45345 0.967346 4.25819 0.772084C4.06293 0.576822 3.74635 0.576822 3.55108 0.772084L0.369102 3.95406ZM13.7227 3.80762L0.722656 3.80762L0.722656 4.80762L13.7227 4.80762L13.7227 3.80762Z" />
+                    </svg>
+                </button>
+                <!-- right arrow -->
+                <button class="right-arrow shrink-0 w-12 h-12 flex items-center justify-center text-2xl border border-opacity-30 text-primary border-primary  text-opacity-30
+                            hover:text-white hover:bg-primary highlight transition-all duration-150 ease-linear">
+                    <svg class="w-4 h-5"  width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path  fill="currentColor" d="M13.6289 4.66117C13.8242 4.46591 13.8242 4.14933 13.6289 3.95406L10.447 0.772083C10.2517 0.576821 9.93512 0.576821 9.73986 0.772083C9.54459 0.967345 9.54459 1.28393 9.73986 1.47919L12.5683 4.30762L9.73986 7.13604C9.54459 7.33131 9.54459 7.64789 9.73986 7.84315C9.93512 8.03841 10.2517 8.03841 10.447 7.84315L13.6289 4.66117ZM0.275391 4.80762H13.2754V3.80762H0.275391V4.80762Z"/>
+                    </svg>
+                </button>
             </div>
-           
 
-        </BaseCarousel>
+        </CostumeSlider>
 
         <VideoModal :show="showVideo" @close="showVideo = false" :src="videoSrc"/>
     </section>
@@ -252,15 +262,14 @@
 <script setup>
 import VideoModal from '@/components/UI/VideoModal.vue'
 
-import BaseCarousel from '@/components/UI/BaseCarousel.vue'
-import RightArrow from '@/components/UI/RightArrow.vue'
-import LeftArrow from '@/components/UI/LeftArrow.vue'
+import CostumeSlider from '@/components/UI/CostumeSlider.vue'
+
 import Star from "@/components/UI/Icons/Star.vue"
 import Play from "@/components/UI/Icons/Play.vue"
 
 const last_carousel_item = ref(null)
-const carousel = ref(null)
-const carousel_container = ref(null)
+const slider = ref(null)
+const slider_container = ref(null)
 const movingBackground = ref(null)
 const showVideo = ref(false)
 const videoSrc = ref(null)
@@ -275,14 +284,14 @@ function openVideo(src) {
 }
 
 function setValues() {
-    container_margin.value = parseInt(window.getComputedStyle(carousel.value).getPropertyValue('margin-right'))
-    carouselHiddenWidth.value = carousel.value.scrollWidth - carousel.value.offsetWidth  - container_margin.value
+    container_margin.value = parseInt(window.getComputedStyle(slider.value).getPropertyValue('margin-right'))
+    carouselHiddenWidth.value = slider.value.scrollWidth - slider.value.offsetWidth  - container_margin.value
     if(window.innerWidth >=  1024){
-        backgroundHiddenWidth.value = movingBackground.value.scrollWidth - carousel.value.offsetWidth
+        backgroundHiddenWidth.value = movingBackground.value.scrollWidth - slider.value.offsetWidth
     }else{
-        backgroundHiddenWidth.value = movingBackground.value.scrollWidth - carousel_container.value.offsetWidth
+        backgroundHiddenWidth.value = movingBackground.value.scrollWidth - slider_container.value.offsetWidth
     }
-    last_carousel_item.value.style.paddingRight = window.getComputedStyle(carousel.value).getPropertyValue('margin-right')
+    last_carousel_item.value.style.paddingRight = window.getComputedStyle(slider.value).getPropertyValue('margin-right')
     movingBackground.value.style.left = `${container_margin.value}px`
     moveBackgroud()
 }
@@ -290,20 +299,23 @@ function setValues() {
 function moveBackgroud() {
     let backgroundOffset = container_margin.value
     if(carouselHiddenWidth.value ){
-        backgroundOffset =  backgroundHiddenWidth.value - ( (  (carouselHiddenWidth.value - carousel_container.value.scrollLeft) / carouselHiddenWidth.value  )  *  backgroundHiddenWidth.value ) - container_margin.value 
+        backgroundOffset =  backgroundHiddenWidth.value - ( (  (carouselHiddenWidth.value - slider_container.value.scrollLeft) / carouselHiddenWidth.value  )  *  backgroundHiddenWidth.value ) - container_margin.value
     }
     movingBackground.value.style.left = `${-backgroundOffset}px`;
 
 }
 
+
+
 onMounted(() => {
     setValues()
     window.addEventListener('resize',setValues)
-    carousel_container.value.addEventListener('scroll',moveBackgroud)
+    slider_container.value.addEventListener('scroll',moveBackgroud)
 })
-onUnmounted(() => {
-    window.removeEventListener('resize',setValues)
 
+onBeforeUnmount(() => {
+    window.removeEventListener('resize',setValues)
+    slider_container.value.removeEventListener('scroll',moveBackgroud)
 })
 </script>
 

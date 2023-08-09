@@ -7,34 +7,46 @@
                 Weitere Events
             </p>
         </div>
-        <BaseCarousel class="flex flex-col gap-y-9 md:gap-y-16">
-            <div v-animate class="carousel-container main-container">
-                <div class="carousel flex  gap-x-8 gap-y-20">
-                    <div v-for="event in events" :key="event.id"  class="last:pr-4 last:box-content">
-                        <EventCard  :event="event"
-                            class="shrink-0 w-[17.25rem] md:w-[19.2rem] " />
-                    </div>
-                    
+        <Splide v-animate :has-track="false" :options="options"  class="flex flex-col gap-y-9 md:gap-y-16"> 
+            <div  class="slide-wrapper main-container">
+                <div class="splide__track" ref="splideTrack">
+                        <ul class="splide__list">
+                            <li v-for="event in events" :key="event.id"  class="splide__slide w-fit last:pr-4 last:box-content">
+                                <EventCard  :event="event"
+                                    class="shrink-0 w-[17.25rem] md:w-[19.2rem] " />
+                            </li>
+                        </ul>
                 </div>
             </div>
-            <div v-animate class="w-full main-container flex items-center gap-x-2">
-                    <button class="w-fit px-12  bg-primary h-12 text-center text-white font-semibold md:text-xl md:order-3">
-                        Alle Events
-                    </button>
-                    <LeftArrow  class="md:order-1"/>
-                    <RightArrow  class="md:order-2"/>
+            <div class="w-full main-container flex items-center gap-x-2">
+                   <NuxtLink  to="/references" class="md:order-3">
+                        <button class="w-fit px-12  bg-primary h-12 text-center text-white font-semibold md:text-xl">
+                            Alle Events
+                        </button>
+                    </NuxtLink>
+                    <SplideArrows />
             </div>
-        </BaseCarousel>
+        </Splide>
     </section>
 </template>
 
 <script setup>
 import EventCard from "@/components/UI/EventCard.vue"
 import Star from "@/components/UI/Icons/Star.vue"
-import RightArrow from '@/components/UI/RightArrow.vue'
-import LeftArrow from '@/components/UI/LeftArrow.vue'
-import BaseCarousel from '@/components/UI/BaseCarousel.vue'
-
+import SplideArrows from '~/components/UI/SplideArrows.vue'
+import { Splide } from '@splidejs/vue-splide';
+import '@splidejs/vue-splide/css';
+const options = reactive({
+    
+    rewind:false,
+    perMove: 1,
+    arrows:true,
+    pagination: false,
+    drag:'free',
+    autoWidth:true,
+    gap:'30px',
+    trimSpace: false,
+})
  const events = ref([
     {
         id:1,

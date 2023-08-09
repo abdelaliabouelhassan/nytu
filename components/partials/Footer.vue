@@ -3,7 +3,7 @@
         <div class="main-container ">
 
             <div class="flex flex-col md:hidden gap-y-9">
-                <div v-animate  class="  md:pl-20 xl:pl-0 flex items-center justify-between">
+                <div   class="  md:pl-20 xl:pl-0 flex items-center justify-between">
                     <NuxtLink to="/"  class=" text-primary">
                         <Logo />
                     </NuxtLink>
@@ -17,10 +17,10 @@
                         </svg>
                     </a>
                 </div>
-                <p  v-animate  class=" text-base font-bold text-primary">
+                <p   class=" text-base font-bold text-primary">
                     Wir sind für Sie da – Nehmen Sie mit uns unverbindlich Kontakt auf.
                 </p>
-                <div v-animate class="flex justify-between">
+                <div  class="flex justify-between">
                     <p class=" text-white font-normal text-base">
                         nytu AG <br>
                         Ruheberg 16 <br>
@@ -28,22 +28,22 @@
                         +41 71 511 74 55 <br>
                         post@nytu.ch
                     </p>
-                    <div data-footer class=" flex flex-col items-start space-y-2 w-full max-w-[5.875rem]">
-                    <NuxtLink :to="item.link"  :class="{'text-primary':item.active}"  class="duration-300  text-white text-base font-normal hover:text-primary	 " v-for="(item,index) in headeLinks" :key="index">
-                    {{item.title}}
-                    </NuxtLink >
-                </div>
+                    <div data-footer class=" flex flex-col items-start space-y-2 w-fit max-w-[10.875rem]">
+                        <NuxtLink :to="item.link"  :class="{'text-primary':item.active}"  class="duration-300  text-white text-base font-normal hover:text-primary	 " v-for="(item,index) in headeLinks" :key="index">
+                        {{item.title}}
+                        </NuxtLink >
+                    </div>
                 </div>
                 
             </div>
 
             <div class=" hidden  justify-between items-start  md:flex ">
-                <div v-animate class="  md:pl-20 xl:pl-0">
+                <div  class="  md:pl-20 xl:pl-0">
                 <NuxtLink to="/"  class=" text-primary">
                     <Logo />
                 </NuxtLink>
                 </div>
-                <div v-animate class=" flex flex-col items-start space-y-8 w-full max-w-[16.813rem]">
+                <div  class=" flex flex-col items-start space-y-8 w-full max-w-[16.813rem]">
                     <p class=" text-base font-bold text-primary">
                         Wir sind für Sie da – Nehmen Sie mit uns unverbindlich Kontakt auf.
                     </p>
@@ -56,13 +56,12 @@
                     </p>
                 </div>
 
-                <div v-animate class=" flex flex-col items-start space-y-2 w-full max-w-[5.875rem]">
+                <div  class=" flex flex-col items-start space-y-2 w-full max-w-[5.875rem]">
                     <NuxtLink :to="item.link"  :class="{'text-primary':item.active}"  class="duration-300  text-white text-base font-normal hover:text-primary	 " v-for="(item,index) in headeLinks" :key="index">
                     {{item.title}}
                     </NuxtLink >
                 </div>
-                <div v-animate class=" flex flex-col items-start space-y-4">
-                    <span class=" text-white text-base font-normal">Social Media</span>
+                <div  class=" flex flex-col items-start space-y-4">
                    
                     <a href="" target="_blank">
                         <svg width="33" height="35" viewBox="0 0 33 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -89,33 +88,18 @@
     import Logo from "@/components/UI/Icons/Logo.vue"
      const headeLinks = ref([
         {
-            title:'Einführung',
-            link:'/',
+            title:'Datenschutz',
+            link:'/data-privacy',
             active:false,
         },
         {
-            title:'Features',
-            link:'/features',
+            title:'Geschäftsbedingungen',
+            link:'/gtc',
             active:false,
         },
-        {
-            title:'This is Us',
-            link:'/about-us',
-            active:false,
-        },
-        {
-            title:'Pricing',
-            link:'/pricing',
-            active:false,
-        },
-        {
-            title:'Referenzen',
-            link:'/references',
-            active:false,
-        },
-        {
-            title:'Testimonials',
-            link:'/',
+         {
+            title:'Impressum',
+            link:'/impressum',
             active:false,
         },
     ]);

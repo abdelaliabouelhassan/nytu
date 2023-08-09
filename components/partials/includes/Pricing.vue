@@ -1,20 +1,50 @@
 <template>
-     <div class=" main-container space-y-16">
-                <div class=" w-full grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div v-for="(plan,index) in plans" :key="index">
-                        <PlanCard v-animate :plan="plan" class="max-w-[47.35rem]"/>
-                    </div>
-                </div>
+     <div v-animate class="main-container w-full">
 
+        <Splide  :has-track="false" :options="options"  class="flex flex-col gap-y-9 md:hidden">
+            <div  class="slide-wrapper">
+                <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide w-full" v-for="(plan,index) in plans" :key="index">
+                                <PlanCard :plan="plan" class="w-full max-w-[28.75rem] mx-auto"/>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+            <SplideArrows  reverse_colors class="shrink-0 mx-auto"/>
+
+         </Splide>
+         
+
+            <div class="hidden w-full md:grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div v-for="(plan,index) in plans" :key="index">
+                    <PlanCard v-animate :plan="plan" class="max-w-[47.35rem]"/>
+                </div>
+            </div>
                
         </div>
 </template>
 
 
 <script setup>
- import PlanCard from "@/components/UI/PlanCard.vue"
- import Star from "@/components/UI/Icons/Star.vue"
+import PlanCard from "@/components/UI/PlanCard.vue"
+import Star from "@/components/UI/Icons/Star.vue"
+import { Splide } from '@splidejs/vue-splide';
+import SplideArrows from '~/components/UI/SplideArrows.vue'
+import '@splidejs/vue-splide/css';
 
+const options = reactive({
+    rewind:false,
+    perMove: 1,
+    arrows:true,
+    perPage: 1,
+    pagination: false,
+    drag:true,
+    gap:'10px',
+    speed:700,
+    
+
+})
 
   const plans = ref([
     {
