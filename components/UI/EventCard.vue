@@ -10,7 +10,7 @@
             <div class=" text-[1.68569rem] md:text-3xl font-bold ">{{event.title}}</div>
             <!-- opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-300 ease-linear -->
             <div ref="description" class="description md:text-base text-sm overflow-hidden">{{event.description}}</div>
-            <nuxt-link :to="'references-details/'+event.id">
+            <nuxt-link :to="'/references-details/'+event.id">
                 <div class="flex items-center gap-x-2 text-primary font-bold">
                    <div class=" md:text-base text-sm">Mehr</div> 
                    <svg class="w-4 h-5"  width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">

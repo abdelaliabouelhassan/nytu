@@ -1,6 +1,6 @@
 <template>
 
-    <header :class="{'bg-white border-primary':!open,' bg-primary border-white ':open}" class="  w-full h-[4rem] z-[40] md:bg-white border-b  md:border-[#D9D9D9] flex justify-between gap-x-4 fixed ">
+    <header :class="{'bg-white border-primary':!open,' bg-primary border-white ':open}" class="  w-full h-[4rem] z-[40] md:bg-white border-b  md:border-[#D9D9D9] flex justify-between md:gap-x-4 fixed ">
        <div class=" flex items-center space-x-10 w-full h-full">
         <NuxtLink to="/" @click="open = false;" :class="{'text-primary':!open,' text-white':open}" class=" duration-500  max-w-[10rem] hover:bg-primary w-full h-full flex md:text-primary hover:text-white md:border-r border-[#D9D9D9]">
              <Logo class=" m-auto"/>
