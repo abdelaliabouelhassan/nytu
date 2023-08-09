@@ -1,7 +1,7 @@
 <template>
-     <div class="main-container w-full">
+     <div v-animate class="main-container w-full">
 
-        <Splide v-animate :has-track="false" :options="options"  class="flex flex-col gap-y-9 md:hidden">
+        <Splide  :has-track="false" :options="options"  class="flex flex-col gap-y-9 md:hidden">
             <div  class="slide-wrapper">
                 <div class="splide__track">
                         <ul class="splide__list">

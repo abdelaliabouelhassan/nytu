@@ -12,8 +12,8 @@
                 Unsere letzten Events
             </p>
         </div>
-        <Splide Splide :has-track="false" :options="options"  class="flex flex-col gap-y-9 md:gap-y-16">
-            <div v-animate class="slide-wrapper main-container">
+        <Splide v-animate :has-track="false" :options="options"  class="flex flex-col gap-y-9 md:gap-y-16">
+            <div class="slide-wrapper main-container">
                 <div class="splide__track">
                         <ul class="splide__list">
                             <li v-for="event in events" :key="event.id"  class="splide__slide w-fit last:pr-4 last:box-content">
@@ -23,7 +23,7 @@
                         </ul>
                 </div>
             </div>
-            <div v-animate class="w-full main-container flex items-center gap-x-2">
+            <div class="w-full main-container flex items-center gap-x-2">
                    <NuxtLink  to="/references" class="md:order-3">
                         <button class="w-fit px-12  bg-primary h-12 text-center text-white font-semibold md:text-xl">
                             Alle Events

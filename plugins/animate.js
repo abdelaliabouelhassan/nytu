@@ -4,8 +4,8 @@ export default defineNuxtPlugin((nuxtApp) => {
       mounted (el) {
         
         el.style.opacity = 0
-        el.style.transition = 'all 500ms ease-in-out'
-        el.style.transform = 'translateY(100px)'
+        el.style.transition = 'all 350ms ease-in-out'
+        el.style.transform = 'translateY(24px)'
         let observer = new IntersectionObserver(( entries) => {
 
             entries.forEach( (entry) => {

@@ -1,18 +1,18 @@
 <template>
 
-    <header :class="{'bg-white border-primary':!open,' bg-primary border-white ':open}" class="  w-full h-[4rem] z-[40] md:bg-white border-b  md:border-[#D9D9D9] flex justify-between fixed ">
+    <header :class="{'bg-white border-primary':!open,' bg-primary border-white ':open}" class="  w-full h-[4rem] z-[40] md:bg-white border-b  md:border-[#D9D9D9] flex justify-between gap-x-4 fixed ">
        <div class=" flex items-center space-x-10 w-full h-full">
-        <NuxtLink to="/"  :class="{'text-primary':!open,' text-white':open}" class=" duration-500  max-w-[10rem] hover:bg-primary w-full h-full flex md:text-primary hover:text-white md:border-r border-[#D9D9D9]">
+        <NuxtLink to="/" @click="open = false;" :class="{'text-primary':!open,' text-white':open}" class=" duration-500  max-w-[10rem] hover:bg-primary w-full h-full flex md:text-primary hover:text-white md:border-r border-[#D9D9D9]">
              <Logo class=" m-auto"/>
         </NuxtLink >
-        <div class=" items-center space-x-4 lg:space-x-5 hidden md:flex cursor-pointer">
+        <div class=" items-center space-x-4 lg:space-x-5 hidden md:flex cursor-pointer h-full">
             <div v-for="(item,index) in headeLinks" :key="index" :class="{'text-primary':item.active}"
-                class="duration-300  text-black text-base font-normal hover:text-primary relative">
+                class="duration-300  text-black text-base font-normal hover:text-primary relative h-full flex items-center">
                 <NuxtLink :to="item.link" v-if="item.title !== 'Nytu hub'">{{item.title}}</NuxtLink >
                 
-                <div v-accordion v-else class="accordion dropdown" >
-                    <div class="accordion-item" >
-                        <div class="accordion-header flex items-center gap-x-2" >
+                <div v-accordion v-else class="accordion dropdown h-full" >
+                    <div class="accordion-item h-full" >
+                        <div class="accordion-header h-full flex items-center gap-x-2" >
                             {{item.title}}
                             <svg class="w-4 h-4 -rotate-180 chevron" width="39" height="21" viewBox="0 0 39 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M36.5869 1.5L19.0869 19L1.58691 1.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -20,7 +20,7 @@
                         </div>
                         
                         <div  v-if="item.title === 'Nytu hub'"
-                            class="accordion-content dropdown-menu bg-white z-50 w-40 flex flex-col divide-y text-black absolute top-11 -left-2 border border-t-0">
+                            class="accordion-content h-full dropdown-menu bg-white z-50 w-40 flex flex-col divide-y text-black absolute top-full -left-2 border border-t-0">
                             
                             <NuxtLink :to="item.link+'#tutorials'"  class="w-full py-2 px-4 hover:text-primary">Tutorials</NuxtLink>
                             <div class="w-full  accordion-item" >
@@ -220,7 +220,7 @@
             link:'/contact',
             active:false,
         },
-         {
+        {
             title:'Nytu hub',
             link:'/help-center',
             active:false,

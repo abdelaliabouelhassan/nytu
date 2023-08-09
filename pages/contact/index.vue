@@ -1,15 +1,15 @@
 <template>
     <div class=" w-full">
-        <SecondSection />
         <FirstSection />
+        <SecondSection />
     </div> 
 </template>
 
 
 
 <script setup>
- import FirstSection from "@/components/partials/sections/contact/FirstSection.vue"
- import SecondSection from "@/components/partials/sections/contact/SecondSection.vue"
+ import FirstSection from "~/components/partials/sections/contact/SecondSection.vue"
+ import SecondSection from "~/components/partials/sections/contact/FirstSection.vue"
 
 
  useSeoMeta({ // change title and description values to your needs

@@ -28,11 +28,11 @@
                         +41 71 511 74 55 <br>
                         post@nytu.ch
                     </p>
-                    <div data-footer class=" flex flex-col items-start space-y-2 w-full max-w-[5.875rem]">
-                    <NuxtLink :to="item.link"  :class="{'text-primary':item.active}"  class="duration-300  text-white text-base font-normal hover:text-primary	 " v-for="(item,index) in headeLinks" :key="index">
-                    {{item.title}}
-                    </NuxtLink >
-                </div>
+                    <div data-footer class=" flex flex-col items-start space-y-2 w-fit max-w-[10.875rem]">
+                        <NuxtLink :to="item.link"  :class="{'text-primary':item.active}"  class="duration-300  text-white text-base font-normal hover:text-primary	 " v-for="(item,index) in headeLinks" :key="index">
+                        {{item.title}}
+                        </NuxtLink >
+                    </div>
                 </div>
                 
             </div>
@@ -88,33 +88,18 @@
     import Logo from "@/components/UI/Icons/Logo.vue"
      const headeLinks = ref([
         {
-            title:'Einführung',
-            link:'/',
+            title:'Datenschutz',
+            link:'/data-privacy',
             active:false,
         },
         {
-            title:'Features',
-            link:'/features',
+            title:'Geschäftsbedingungen',
+            link:'/gtc',
             active:false,
         },
-        {
-            title:'This is Us',
-            link:'/about-us',
-            active:false,
-        },
-        {
-            title:'Pricing',
-            link:'/pricing',
-            active:false,
-        },
-        {
-            title:'Referenzen',
-            link:'/references',
-            active:false,
-        },
-        {
-            title:'Testimonials',
-            link:'/',
+         {
+            title:'Impressum',
+            link:'/impressum',
             active:false,
         },
     ]);

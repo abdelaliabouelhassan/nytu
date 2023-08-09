@@ -26,7 +26,7 @@
             <div class=" relative w-full">
                   <input type="text" class=" w-full  h-[3.25rem] border border-white bg-transparent text-white text-base md:text-xl placeholder-white pl-4 md:pl-8 outline-none pr-28 md:pr-36" placeholder="Ihre persönliche Webadresse" required>
                     <div  class=" absolute top-0 right-0 w-[6rem] md:w-[8.438rem] h-[3.25rem] bg-white flex  text-center text-primary text-base md:text-xl font-normal">
-                        <span class=" m-auto">.privent.ch</span>
+                        <span class=" m-auto">.nytu.app</span>
                     </div>
             </div>
             <div class=" w-full flex md:flex-row flex-col space-y-4 md:space-x-4 md:space-y-0 items-start md:justify-between">
@@ -45,7 +45,7 @@
                             <div class="control_indicator"></div>
                         </label>
                       </div>
-                        <p class=" text-white text-xl font-normal">Ich akzeptiere die Allgemeinen <NuxtLink to="/gtc" class=" cursor-pointer underline hover:underline text-opacity-80 duration-200">Geschäftsbedingungen</NuxtLink> und bin mit dem <NuxtLink  to="/data-privacy" class=" underline hover:underline text-opacity-80 duration-200">Datenschutz</NuxtLink>  einverstanden.</p>
+                        <p class=" text-white md:text-xl font-normal">Ich akzeptiere die Allgemeinen <NuxtLink to="/gtc" class=" cursor-pointer underline hover:underline text-opacity-80 duration-200">Geschäftsbedingungen</NuxtLink> und bin mit dem <NuxtLink  to="/data-privacy" class=" underline hover:underline text-opacity-80 duration-200">Datenschutz</NuxtLink>  einverstanden.</p>
                     </div>
                     
                     <button type="submit" class=" w-full text-center text-base md:text-xl font-bold text-white bg-tertiary md:w-[19.938rem] h-[3rem]">Anfrage senden</button>
