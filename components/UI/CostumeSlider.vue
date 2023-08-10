@@ -94,15 +94,16 @@ function setValues() {
 function highlightArrows(){
 
     if(sliderContainer.value.scrollLeft> scrollLimit.value-2 ){
-        rightArrow.value.classList.remove('highlight')
+        rightArrow.value.disabled = true
     }else{
-        rightArrow.value.classList.add('highlight')
+        rightArrow.value.disabled = false
     }
 
     if(sliderContainer.value.scrollLeft === 0){
-        leftArrow.value.classList.remove('highlight')
+        leftArrow.value.disabled = true
+
     }else{
-        leftArrow.value.classList.add('highlight')
+        leftArrow.value.disabled = false
     }
     
 }
@@ -125,7 +126,6 @@ onMounted(() => {
 
     setValues()
     setTimeout(() => {
-        
         setValues()
     }, 2000);
     window.addEventListener('resize',setValues)
@@ -158,8 +158,15 @@ onUnmounted(() => {
     .slider-parent :deep(.slider-container)::-webkit-scrollbar {
         display: none;
     }
-    .slider-parent :deep(.left-arrow.highlight), .slider-parent :deep(.right-arrow.highlight){
-        @apply border-primary text-primary hover:text-white ;
+    .slider-parent :deep(.left-arrow), .slider-parent :deep(.right-arrow){
+        @apply shrink-0 w-12 h-12 flex items-center justify-center text-2xl border text-primary border-primary transition-colors duration-150 ease-linear
+            active:text-white active:bg-primary 
+            hover:md:text-white hover:md:bg-primary
+
+            disabled:border-opacity-30 disabled:text-opacity-30
+            disabled:active:text-primary disabled:active:bg-transparent 
+            disabled:active:border-opacity-30 disabled:active:text-opacity-30
+        ;
     }
 
 </style>
