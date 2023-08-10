@@ -13,7 +13,7 @@
             </p>
         </div>
         <Splide v-animate :has-track="false" :options="options"  class="flex flex-col gap-y-9 md:gap-y-16">
-            <div  class="slide-wrapper main-container">
+            <div  class="slide-wrapper max-w-[63.5rem] mx-auto px-4">
                 <div class="splide__track">
                         <ul class="splide__list">
                             <li v-for="(person,index) in team" :key="index" class="splide__slide w-fit last:pr-4">

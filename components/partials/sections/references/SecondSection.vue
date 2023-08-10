@@ -1,7 +1,7 @@
 <template>
     <section class=" w-full main-container  pt-10 pb-28">
-        <div v-animate class=" w-full grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-20">
-            <EventCard   v-for="(event,index) in displayedEvents" :key="index" :event="event" />
+        <div  class=" w-full grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-20">
+            <EventCard v-animate  v-for="(event,index) in displayedEvents" :key="index" :event="event" />
             <!-- <EventCard v-for="(event,index) in events" :key="index" :event="event" />
             <EventCard v-for="(event,index) in events" :key="index" :event="event" /> -->
         </div>
@@ -97,7 +97,16 @@ const displayedEvents =  computed(()=>{
 
 function showMore() {
     if(elementsNumber.value+3 >= events.value.length){
-        elementsNumber.value = events.value.length
+       // elementsNumber.value = events.value.length // show all
+       //slowly show all only first time
+       if(displayedEvents.value.length == events.value.length) return
+         let temp = events.value.length
+            let interval = setInterval(() => {
+                elementsNumber.value+=1
+                if(elementsNumber.value == temp){
+                    clearInterval(interval)
+                }
+            }, 100);
     }else{
         elementsNumber.value+=3
     }

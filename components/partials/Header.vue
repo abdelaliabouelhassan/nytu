@@ -21,8 +21,7 @@
                         
                         <div  v-if="item.title === 'Nytu hub'"
                             class="accordion-content h-full dropdown-menu bg-white z-50 w-40 flex flex-col divide-y text-black absolute top-full -left-2 border border-t-0">
-                            
-                            <NuxtLink :to="item.link+'#tutorials'"  class="w-full py-2 px-4 hover:text-primary">Tutorials</NuxtLink>
+                            <NuxtLink :to="item.link+'#updates'" class="w-full py-2 px-4 hover:text-primary">Updates</NuxtLink>
                             <div class="w-full  accordion-item" >
                                 <div class="accordion-header py-2 px-4 flex items-center justify-between hover:text-primary">
                                     <span>Hilfe Center</span>
@@ -31,11 +30,12 @@
                                     </svg>
                                 </div>
                                 <div class="accordion-content px-2 text-sm flex flex-col px-8 ">
-                                    <NuxtLink :to="item.link+'#faq'" class="py-2 hover:text-primary">FAQ</NuxtLink>
                                     <NuxtLink :to="item.link+'#downloads'" class="py-2 hover:text-primary">Downloads</NuxtLink>
+                                    <NuxtLink :to="item.link+'#faq'" class="py-2 hover:text-primary">FAQ</NuxtLink>
                                 </div>
                             </div>
-                            <NuxtLink :to="item.link+'#updates'" class="w-full py-2 px-4 hover:text-primary">Updates</NuxtLink>
+                            <NuxtLink :to="item.link+'#tutorials'"  class="w-full py-2 px-4 hover:text-primary">Tutorials</NuxtLink>
+                            
                         </div>
                     </div>
                     
@@ -83,8 +83,8 @@
                                     </div>
                         
                                     <div  class="accordion-content px-4 w-full flex flex-col divide-y font-bold text-white">
+                                        <NuxtLink  @click="open = false;" :to="item.link+'#updates'" class="w-full py-2 hover:text-black">Updates</NuxtLink>
 
-                                        <NuxtLink  @click="open = false;" :to="item.link+'#tutorials'"  class="w-full py-2 hover:text-black">Tutorials</NuxtLink>
                                         <div class="w-full py-2 accordion-item">
                                             <div class="accordion-header  flex items-center justify-between hover:text-black">
                                                 <span>Hilfe Center</span>
@@ -93,11 +93,12 @@
                                                 </svg>
                                             </div>
                                             <div class="accordion-content px-2 text-sm flex flex-col ">
-                                                <NuxtLink  @click="open = false;" :to="item.link+'#faq'" class="py-2 hover:text-black">FAQ</NuxtLink>
                                                 <NuxtLink  @click="open = false;" :to="item.link+'#downloads'" class="py-2 hover:text-black">Downloads</NuxtLink>
+                                                <NuxtLink  @click="open = false;" :to="item.link+'#faq'" class="py-2 hover:text-black">FAQ</NuxtLink>
                                             </div>
                                         </div>
-                                        <NuxtLink  @click="open = false;" :to="item.link+'#updates'" class="w-full py-2 hover:text-black">Updates</NuxtLink>
+                                        <NuxtLink  @click="open = false;" :to="item.link+'#tutorials'"  class="w-full py-2 hover:text-black">Tutorials</NuxtLink>
+
 
                                     </div>
                                 </div>
