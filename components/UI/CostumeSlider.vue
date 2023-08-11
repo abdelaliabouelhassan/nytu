@@ -91,6 +91,7 @@ function setValues() {
     carouselMargin.value = parseInt( window.getComputedStyle(slider.value).getPropertyValue('margin-right') )
 }
 
+
 function highlightArrows(){
 
     if(sliderContainer.value.scrollLeft> scrollLimit.value-2 ){
@@ -128,7 +129,12 @@ onMounted(() => {
     setTimeout(() => {
         setValues()
     }, 2000);
-    window.addEventListener('resize',setValues)
+    window.addEventListener('resize',() => {
+        setValues()
+        if(window.innerWidth < 768){
+             window.location.reload()
+        }
+    })
     highlightArrows()
     sliderContainer.value.addEventListener('scroll',highlightArrows)
 
