@@ -40,7 +40,7 @@ const options = reactive({
     perPage: 1,
     pagination: false,
     drag:true,
-    gap:'10px',
+    gap:'50px',
     speed:700,
     
 

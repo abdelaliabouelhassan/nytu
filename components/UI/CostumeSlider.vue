@@ -1,6 +1,9 @@
 <template>
     <div class="slider-parent relative"  ref="sliderParent">
         <slot></slot>
+
+
+        <div class=" absolute md:hidden top-0 left-0 w-full h-[44rem] z-50"></div>
         
         <!-- 
             <div class="slider-container overflow-scroll" ref="sliderContainer">
