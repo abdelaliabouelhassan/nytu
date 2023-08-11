@@ -20,8 +20,9 @@
                 <p>{{item}}</p>
             </div>
         </div>
-        <NuxtLink :to="'/references-details/' + plan.id" class=" w-full max-h-[16.125rem] relative">
-            <DateTicket  :datetext="plan.eventDate" class=" absolute top-0 right-0 text-sm"/>
+        <NuxtLink :to="'/references-details/' + plan.id" >
+          <div class=" w-full max-h-[16.125rem] relative">
+                <DateTicket  :datetext="plan.eventDate" class=" absolute top-0 right-0 text-sm"/>
             <div class=" flex flex-col items-start space-y-2 absolute left-5 bottom-6">
                 <h1 class=" text-white font-bold text-[1.375rem]">{{ plan.eventTitle }}</h1>
                <div class=" flex items-center space-x-1 text-primary">
@@ -32,6 +33,7 @@
                </div>
             </div>
             <img :src="plan.eventImg" class=" w-full object-cover" alt="">
+            </div>
         </NuxtLink>
 
         <NuxtLink to="/contact" class=" w-full h-[3rem] flex border border-primary group-hover:bg-primary   cursor-pointer  ">
