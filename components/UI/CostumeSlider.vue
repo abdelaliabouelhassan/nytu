@@ -131,9 +131,9 @@ onMounted(() => {
     }, 2000);
     window.addEventListener('resize',() => {
         setValues()
-        if(window.innerWidth < 768){
-             window.location.reload()
-        }
+        // if(window.innerWidth < 768){
+        //      window.location.reload()
+        // }
     })
     highlightArrows()
     sliderContainer.value.addEventListener('scroll',highlightArrows)
