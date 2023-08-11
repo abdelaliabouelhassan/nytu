@@ -1,5 +1,5 @@
 <template>
-    <div class="h-full w-full  bg-white hover:bg-tertiary group p-5  md:p-10 space-y-6 duration-300">
+    <div class="h-full w-full relative  bg-white hover:bg-tertiary group p-5  md:p-10 space-y-6 duration-300">
         <div class=" w-full flex flex-col items-start space-y-4 border-b border-[#D9D9D9] pb-5">
              <div class=" flex items-center space-x-2">
                 <Star class=" w-[0.95806rem] h-[0.95806rem] md:w-[1.375rem] md:h-[1.375rem] text-primary" />

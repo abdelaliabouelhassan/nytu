@@ -6,7 +6,7 @@
                 <div class="splide__track">
                         <ul class="splide__list">
                             <li class="splide__slide w-full" v-for="(plan,index) in plans" :key="index">
-                                <PlanCard :plan="plan" class="w-full max-w-[28.75rem] mx-auto"/>
+                                <PlanCard :plan="plan" class="w-full "/>
                             </li>
                         </ul>
                 </div>
@@ -40,7 +40,7 @@ const options = reactive({
     perPage: 1,
     pagination: false,
     drag:true,
-    gap:'100px',
+    gap:'10px',
     speed:700,
     
 
